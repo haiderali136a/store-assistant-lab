@@ -74,15 +74,15 @@ A correct summary beside an unrestricted model answer would still leave the same
 
 ## Check the complete displayed reply
 
-I added a [response function](storelab/presentation.py) for this specific intent: the selected item’s price and return window. It builds the entire displayed reply from the tool results. It does not append the model’s message or interpolate document prose. The application supplies the store, market and selected item; retrieval must already be scoped to that store.
+I added a [response function](https://github.com/haiderali136a/store-assistant-lab/blob/0a086ec268f745be9cb300a2e90f7b6d35703018/storelab/presentation.py) for this specific intent: the selected item’s price and return window. It builds the entire displayed reply from the tool results. It does not append the model’s message or interpolate document prose. The application supplies the store, market and selected item; retrieval must already be scoped to that store.
 
 I replayed the twenty saved tool responses through this path. Each produced:
 
 > The selected item's price is 179.00 SAR. The policy lists a 7-day return window. The retrieved details do not specify when that period begins.
 
-The [before-and-after record](results/presentation-replay-05/replay.json) preserves both messages and hashes of the source traces. This was an offline presentation change, with no new model requests. It does not change the original workflow results or demonstrate a more accurate model.
+The [before-and-after record](https://github.com/haiderali136a/store-assistant-lab/blob/0a086ec268f745be9cb300a2e90f7b6d35703018/results/presentation-replay-05/replay.json) preserves both messages and hashes of the source traces. This was an offline presentation change, with no new model requests. It does not change the original workflow results or demonstrate a more accurate model.
 
-Repetition only tests the same missing information again. To exercise different decisions, the [response tests](tests/test_presentation.py) also supply an explicit purchase start, an explicit delivery start, conflicting policy fields, and missing or failed policy retrieval. Supported starts are displayed as supplied. When policy fields conflict, the reply says: “The retrieved policies disagree; I could not verify the return window.” If policy retrieval fails, it keeps the supported price and says it could not verify the window. Malformed fields and an unrecognised start event also cause the function to withhold the window.
+Repetition only tests the same missing information again. To exercise different decisions, the [response tests](https://github.com/haiderali136a/store-assistant-lab/blob/0a086ec268f745be9cb300a2e90f7b6d35703018/tests/test_presentation.py) also supply an explicit purchase start, an explicit delivery start, conflicting policy fields, and missing or failed policy retrieval. Supported starts are displayed as supplied. When policy fields conflict, the reply says: “The retrieved policies disagree; I could not verify the return window.” If policy retrieval fails, it keeps the supported price and says it could not verify the window. Malformed fields and an unrecognised start event also cause the function to withhold the window.
 
 The regression checks the complete returned text. Replacing the saved model answer with an unsupported sentence does not change it. The response function never reads that message.
 
@@ -100,9 +100,9 @@ For the return-policy question, the one-batch workflow added the unsupported pur
 
 The split is descriptive, not conclusive evidence that the loop is better. These are repeated generations for one question; nine bounded answers had exactly the same wording. The workflows also differ in their final-step schemas and instructions. The finding supported here is that the checker missed the added claim in both paths.
 
-The repeatability run used 240 model requests and about $2.08 in estimated standard API usage, separate from the initial comparison's $0.21. The [repeatability review](results/claude-repeatability-04/REVIEW.md) records token usage, timings and the individual answer assessments.
+The repeatability run used 240 model requests and about $2.08 in estimated standard API usage, separate from the initial comparison's $0.21. The [repeatability review](https://github.com/haiderali136a/store-assistant-lab/blob/0a086ec268f745be9cb300a2e90f7b6d35703018/results/claude-repeatability-04/REVIEW.md) records token usage, timings and the individual answer assessments.
 
-These cases did not require a lookup whose input depended on an earlier result. Two model calls are not a minimum either: a known item and field may be fetched and displayed directly. The [companion README](README.md) explains the workflows and related work.
+These cases did not require a lookup whose input depended on an earlier result. Two model calls are not a minimum either: a known item and field may be fetched and displayed directly. The [companion README](https://github.com/haiderali136a/store-assistant-lab/blob/0a086ec268f745be9cb300a2e90f7b6d35703018/README.md) explains the workflows and related work.
 
 ## The same checking gap in a product lookup
 
@@ -114,9 +114,9 @@ The ID contained the word `retired`. In the original paired run, both answers cl
 
 These synthetic cases were selected during development. There is no live store integration or independent set of customer questions. The workflows use a custom JSON-schema protocol. Temperature 0 does not guarantee identical repetitions, and the observed counts are not production failure rates.
 
-I checked the twenty saved policy answers, grouped into seven exact wordings, against the retrieved policy in a [guided review](results/claude-repeatability-04/HUMAN-REVIEW.md). These represent two behaviours: adding a purchase start or leaving the start unstated. The [review file](results/claude-repeatability-04/POLICY-ANSWERS.md) preserves all twenty policy messages alongside the original Codex assessments. The experiment does not validate live source freshness.
+I checked the twenty saved policy answers, grouped into seven exact wordings, against the retrieved policy in a [guided review](https://github.com/haiderali136a/store-assistant-lab/blob/0a086ec268f745be9cb300a2e90f7b6d35703018/results/claude-repeatability-04/HUMAN-REVIEW.md). These represent two behaviours: adding a purchase start or leaving the start unstated. The [review file](https://github.com/haiderali136a/store-assistant-lab/blob/0a086ec268f745be9cb300a2e90f7b6d35703018/results/claude-repeatability-04/POLICY-ANSWERS.md) preserves all twenty policy messages alongside the original Codex assessments. The experiment does not validate live source freshness.
 
-The [companion lab](README.md) contains the fixtures, raw traces, source snapshots and the [renderer](storelab/cards.py). After the README setup, replay the saved responses locally without an API key:
+The [companion lab](https://github.com/haiderali136a/store-assistant-lab/blob/0a086ec268f745be9cb300a2e90f7b6d35703018/README.md) contains the fixtures, raw traces, source snapshots and the [renderer](https://github.com/haiderali136a/store-assistant-lab/blob/0a086ec268f745be9cb300a2e90f7b6d35703018/storelab/cards.py). After the README setup, replay the saved responses locally without an API key:
 
 ```bash
 python -m storelab.presentation_replay \
