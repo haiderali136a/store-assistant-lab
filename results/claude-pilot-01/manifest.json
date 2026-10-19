@@ -1,0 +1,46 @@
+{
+  "started_at": "2026-10-18T12:32:03.228454+00:00",
+  "status": "complete",
+  "python": "3.13.7",
+  "platform": "Darwin",
+  "machine": "arm64",
+  "langgraph": "1.2.16",
+  "pydantic": "2.14.1",
+  "source_sha256": {
+    "pyproject.toml": "f889dd0fdea6e5518a635d46877c3c101c86814837c0ec02c861817eac788a04",
+    "requirements.lock.txt": "647990d7482db29898817e3f8c34b480fdbca0cb41d7844a96e9ecb3cff02d98",
+    "storelab/__init__.py": "d292c103821458fafc36cfbdfde86dde96eb566cc9fab720f415110326bde51d",
+    "storelab/claude.py": "a3a3a5ce19c86126975e497e0ddb2ea11ce97206b0456a27e7f6039edd632653",
+    "storelab/contracts.py": "2704b6211a21e50bfc3067b5d14da7e43222c645a60031de88bb7852a021b72c",
+    "storelab/evaluation.py": "54390e6dedbfb40f6a1da523af81389d2387f976ae3eaa8fea5bc49daf9eff6a",
+    "storelab/fixtures.py": "bffc2e91044126dc34f1be8243cb6753fdff9deed976d940e6872d565f45ec4a",
+    "storelab/models.py": "f46d3b1caa121f6e5fabd8054b0f91a21b36e7253aff8dcf84039f0a8647325b",
+    "storelab/run.py": "fb9a3036e8ef59091d66171713be1ffeb99f30eea72be0f8d26f4a53516995a1",
+    "storelab/tools.py": "123176f42b77665154c15cc079100875aaa5f6ddffcd812f2aa6af9947cbacce",
+    "storelab/workflows.py": "cf0f0c7802d1b6001a60856a0557ec47b0cc9322f6996358af9d46b7343b0104"
+  },
+  "model": {
+    "provider": "anthropic",
+    "model": "claude-sonnet-4-6",
+    "options": {
+      "temperature": 0,
+      "max_tokens": 1200
+    },
+    "seed": null,
+    "automatic_retries": 0,
+    "run_request_limit": 32,
+    "structured_output": "output_config.format JSON schema"
+  },
+  "case_ids": [
+    "cedar-known",
+    "cedar-discovery",
+    "cedar-ambiguous",
+    "cedar-timeout"
+  ],
+  "repeat": 1,
+  "order": "alternating architecture order by case and repeat",
+  "network": "api.anthropic.com; synthetic data only; hosted tracing disabled",
+  "warmup": "No separate warmup; first-use provider/schema overhead may affect timings",
+  "finished_at": "2026-10-18T12:32:56.522909+00:00",
+  "completed_runs": 8
+}

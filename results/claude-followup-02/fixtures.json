@@ -1,0 +1,176 @@
+[
+  {
+    "id": "followup-same_prices",
+    "family": "same_prices",
+    "context": {
+      "store": "cedar",
+      "market": "SA",
+      "selected_variant": null
+    },
+    "query": "How much is the blue Drift Tee?",
+    "history": [],
+    "world": {
+      "price_override": null,
+      "available_override": null,
+      "catalog_timeout": false
+    },
+    "expected": {
+      "status": "clarify",
+      "required_claims": [],
+      "allow_candidate_prices": true
+    },
+    "protocol": "followup-v2"
+  },
+  {
+    "id": "followup-different_prices",
+    "family": "different_prices",
+    "context": {
+      "store": "cedar",
+      "market": "SA",
+      "selected_variant": null
+    },
+    "query": "How much is the blue Drift Tee?",
+    "history": [],
+    "world": {
+      "price_override": null,
+      "available_override": null,
+      "catalog_timeout": false,
+      "variant_price_overrides": {
+        "variant-12": "199.00"
+      }
+    },
+    "expected": {
+      "status": "clarify",
+      "required_claims": [],
+      "allow_candidate_prices": true
+    },
+    "protocol": "followup-v2"
+  },
+  {
+    "id": "followup-retired_reference",
+    "family": "retired_reference",
+    "context": {
+      "store": "cedar",
+      "market": "SA",
+      "selected_variant": "variant-retired-11"
+    },
+    "query": "What does the item from my old link cost now? It was a blue Drift Tee, size M. If that link is no longer valid, please look for the same title, colour and size in the current catalogue and tell me what you find.",
+    "history": [],
+    "world": {
+      "price_override": null,
+      "available_override": null,
+      "catalog_timeout": false
+    },
+    "expected": {
+      "status": "answered",
+      "required_claims": [
+        [
+          "variant-11",
+          "price",
+          "179.00"
+        ],
+        [
+          "variant-11",
+          "currency",
+          "SAR"
+        ]
+      ]
+    },
+    "protocol": "followup-v2"
+  },
+  {
+    "id": "followup-changed_price",
+    "family": "changed_price",
+    "context": {
+      "store": "cedar",
+      "market": "SA",
+      "selected_variant": "variant-11"
+    },
+    "query": "Earlier you said it was cheaper. What is the price now, in the same currency?",
+    "history": [
+      {
+        "role": "assistant",
+        "content": "Previously observed price: 179.00 SAR for variant-11."
+      }
+    ],
+    "world": {
+      "price_override": "219.00",
+      "available_override": null,
+      "catalog_timeout": false
+    },
+    "expected": {
+      "status": "answered",
+      "required_claims": [
+        [
+          "variant-11",
+          "price",
+          "219.00"
+        ],
+        [
+          "variant-11",
+          "currency",
+          "SAR"
+        ]
+      ]
+    },
+    "protocol": "followup-v2"
+  },
+  {
+    "id": "followup-price_and_policy",
+    "family": "price_and_policy",
+    "context": {
+      "store": "cedar",
+      "market": "SA",
+      "selected_variant": "variant-11"
+    },
+    "query": "What is the selected item's current price and currency, and how many days for returns?",
+    "history": [],
+    "world": {
+      "price_override": null,
+      "available_override": null,
+      "catalog_timeout": false
+    },
+    "expected": {
+      "status": "answered",
+      "required_claims": [
+        [
+          "variant-11",
+          "price",
+          "179.00"
+        ],
+        [
+          "variant-11",
+          "currency",
+          "SAR"
+        ],
+        [
+          "cedar",
+          "returns_days",
+          "7"
+        ]
+      ]
+    },
+    "protocol": "followup-v2"
+  },
+  {
+    "id": "followup-catalog_timeout",
+    "family": "catalog_timeout",
+    "context": {
+      "store": "cedar",
+      "market": "SA",
+      "selected_variant": "variant-11"
+    },
+    "query": "What is the current price and currency of my selected item?",
+    "history": [],
+    "world": {
+      "price_override": null,
+      "available_override": null,
+      "catalog_timeout": true
+    },
+    "expected": {
+      "status": "unavailable",
+      "required_claims": []
+    },
+    "protocol": "followup-v2"
+  }
+]

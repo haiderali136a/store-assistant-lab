@@ -1,0 +1,34 @@
+[
+  {
+    "id": "control-missing_reference",
+    "family": "retired_reference",
+    "context": {
+      "store": "cedar",
+      "market": "SA",
+      "selected_variant": "variant-1099"
+    },
+    "query": "What does the item from my old link cost now? It was a blue Drift Tee, size M. If that link is no longer valid, please look for the same title, colour and size in the current catalogue and tell me what you find.",
+    "history": [],
+    "world": {
+      "price_override": null,
+      "available_override": null,
+      "catalog_timeout": false
+    },
+    "expected": {
+      "status": "answered",
+      "required_claims": [
+        [
+          "variant-11",
+          "price",
+          "179.00"
+        ],
+        [
+          "variant-11",
+          "currency",
+          "SAR"
+        ]
+      ]
+    },
+    "protocol": "followup-v2"
+  }
+]

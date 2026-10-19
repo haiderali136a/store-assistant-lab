@@ -1,0 +1,3547 @@
+{
+  "reviewed_on": "2026-10-19",
+  "reviewer": "Codex coding assistant; not an independent human review and not attributed to Haider",
+  "method": "All distinct displayed messages read against scenario/tool evidence. Exact repeated text grouped within each scenario; every execution maps to its reviewed wording. Counts concern the stated return-start rule, not full answer correctness.",
+  "distinct_message_groups": 48,
+  "counts": {
+    "bounded": {
+      "runs": 60,
+      "structured_passes": 60,
+      "policy_runs": 10,
+      "unsupported_start": 9,
+      "affected_files": [
+        "followup-price_and_policy-bounded-r0.json",
+        "followup-price_and_policy-bounded-r1.json",
+        "followup-price_and_policy-bounded-r2.json",
+        "followup-price_and_policy-bounded-r3.json",
+        "followup-price_and_policy-bounded-r4.json",
+        "followup-price_and_policy-bounded-r5.json",
+        "followup-price_and_policy-bounded-r6.json",
+        "followup-price_and_policy-bounded-r7.json",
+        "followup-price_and_policy-bounded-r9.json"
+      ]
+    },
+    "tool_loop": {
+      "runs": 60,
+      "structured_passes": 60,
+      "policy_runs": 10,
+      "unsupported_start": 4,
+      "affected_files": [
+        "followup-price_and_policy-tool_loop-r0.json",
+        "followup-price_and_policy-tool_loop-r4.json",
+        "followup-price_and_policy-tool_loop-r6.json",
+        "followup-price_and_policy-tool_loop-r8.json"
+      ]
+    }
+  },
+  "rows": [
+    {
+      "file": "followup-catalog_timeout-bounded-r0.json",
+      "family": "catalog_timeout",
+      "message": "I'm sorry, I wasn't able to retrieve the details for your selected item right now due to a temporary lookup issue. Please try again in a moment, and I'll be happy to fetch the current price and currency for you.",
+      "assessment": {
+        "structured_pass": true,
+        "reasons": [],
+        "missing_required_claims": [],
+        "unsupported_claims": [],
+        "human_review_required": true
+      },
+      "error": null,
+      "tool_calls": [
+        {
+          "name": "get_variant",
+          "arguments": {
+            "variant_id": "variant-11"
+          }
+        }
+      ],
+      "review": {
+        "issues": [],
+        "unsupported_start_event": null,
+        "notes": "Explains inability to retrieve a price, quotes no price and does not substitute remembered facts. Some variants promise to help on retry; future recovery is not established."
+      }
+    },
+    {
+      "file": "followup-catalog_timeout-bounded-r1.json",
+      "family": "catalog_timeout",
+      "message": "I'm sorry, I wasn't able to retrieve the details for your selected item right now due to a temporary lookup issue. Please try again in a moment, and I'll be happy to provide the current price and currency for you.",
+      "assessment": {
+        "structured_pass": true,
+        "reasons": [],
+        "missing_required_claims": [],
+        "unsupported_claims": [],
+        "human_review_required": true
+      },
+      "error": null,
+      "tool_calls": [
+        {
+          "name": "get_variant",
+          "arguments": {
+            "variant_id": "variant-11"
+          }
+        }
+      ],
+      "review": {
+        "issues": [],
+        "unsupported_start_event": null,
+        "notes": "Explains inability to retrieve a price, quotes no price and does not substitute remembered facts. Some variants promise to help on retry; future recovery is not established."
+      }
+    },
+    {
+      "file": "followup-catalog_timeout-bounded-r2.json",
+      "family": "catalog_timeout",
+      "message": "I'm sorry, I wasn't able to retrieve the details for your selected item right now due to a temporary lookup issue. Please try again in a moment, and I'll be happy to fetch the current price and currency for you.",
+      "assessment": {
+        "structured_pass": true,
+        "reasons": [],
+        "missing_required_claims": [],
+        "unsupported_claims": [],
+        "human_review_required": true
+      },
+      "error": null,
+      "tool_calls": [
+        {
+          "name": "get_variant",
+          "arguments": {
+            "variant_id": "variant-11"
+          }
+        }
+      ],
+      "review": {
+        "issues": [],
+        "unsupported_start_event": null,
+        "notes": "Explains inability to retrieve a price, quotes no price and does not substitute remembered facts. Some variants promise to help on retry; future recovery is not established."
+      }
+    },
+    {
+      "file": "followup-catalog_timeout-bounded-r3.json",
+      "family": "catalog_timeout",
+      "message": "I'm sorry, I wasn't able to retrieve the details for your selected item right now due to a temporary lookup issue. Please try again in a moment, and I'll be happy to get the current price and currency for you.",
+      "assessment": {
+        "structured_pass": true,
+        "reasons": [],
+        "missing_required_claims": [],
+        "unsupported_claims": [],
+        "human_review_required": true
+      },
+      "error": null,
+      "tool_calls": [
+        {
+          "name": "get_variant",
+          "arguments": {
+            "variant_id": "variant-11"
+          }
+        }
+      ],
+      "review": {
+        "issues": [],
+        "unsupported_start_event": null,
+        "notes": "Explains inability to retrieve a price, quotes no price and does not substitute remembered facts. Some variants promise to help on retry; future recovery is not established."
+      }
+    },
+    {
+      "file": "followup-catalog_timeout-bounded-r4.json",
+      "family": "catalog_timeout",
+      "message": "I'm sorry, I wasn't able to retrieve the details for your selected item right now due to a temporary lookup issue. Please try again in a moment, and I'll be happy to fetch the current price and currency for you.",
+      "assessment": {
+        "structured_pass": true,
+        "reasons": [],
+        "missing_required_claims": [],
+        "unsupported_claims": [],
+        "human_review_required": true
+      },
+      "error": null,
+      "tool_calls": [
+        {
+          "name": "get_variant",
+          "arguments": {
+            "variant_id": "variant-11"
+          }
+        }
+      ],
+      "review": {
+        "issues": [],
+        "unsupported_start_event": null,
+        "notes": "Explains inability to retrieve a price, quotes no price and does not substitute remembered facts. Some variants promise to help on retry; future recovery is not established."
+      }
+    },
+    {
+      "file": "followup-catalog_timeout-bounded-r5.json",
+      "family": "catalog_timeout",
+      "message": "I'm sorry, I wasn't able to retrieve the details for your selected item right now due to a temporary lookup issue. Please try again in a moment, and I'll be happy to fetch the current price and currency for you.",
+      "assessment": {
+        "structured_pass": true,
+        "reasons": [],
+        "missing_required_claims": [],
+        "unsupported_claims": [],
+        "human_review_required": true
+      },
+      "error": null,
+      "tool_calls": [
+        {
+          "name": "get_variant",
+          "arguments": {
+            "variant_id": "variant-11"
+          }
+        }
+      ],
+      "review": {
+        "issues": [],
+        "unsupported_start_event": null,
+        "notes": "Explains inability to retrieve a price, quotes no price and does not substitute remembered facts. Some variants promise to help on retry; future recovery is not established."
+      }
+    },
+    {
+      "file": "followup-catalog_timeout-bounded-r6.json",
+      "family": "catalog_timeout",
+      "message": "I'm sorry, I wasn't able to retrieve the details for your selected item right now due to a temporary lookup issue. Please try again in a moment, and I'll be happy to get the current price and currency for you.",
+      "assessment": {
+        "structured_pass": true,
+        "reasons": [],
+        "missing_required_claims": [],
+        "unsupported_claims": [],
+        "human_review_required": true
+      },
+      "error": null,
+      "tool_calls": [
+        {
+          "name": "get_variant",
+          "arguments": {
+            "variant_id": "variant-11"
+          }
+        }
+      ],
+      "review": {
+        "issues": [],
+        "unsupported_start_event": null,
+        "notes": "Explains inability to retrieve a price, quotes no price and does not substitute remembered facts. Some variants promise to help on retry; future recovery is not established."
+      }
+    },
+    {
+      "file": "followup-catalog_timeout-bounded-r7.json",
+      "family": "catalog_timeout",
+      "message": "I'm sorry, I wasn't able to retrieve the details for your selected item right now due to a temporary lookup issue. Please try again in a moment, and I'll be happy to get the current price and currency for you.",
+      "assessment": {
+        "structured_pass": true,
+        "reasons": [],
+        "missing_required_claims": [],
+        "unsupported_claims": [],
+        "human_review_required": true
+      },
+      "error": null,
+      "tool_calls": [
+        {
+          "name": "get_variant",
+          "arguments": {
+            "variant_id": "variant-11"
+          }
+        }
+      ],
+      "review": {
+        "issues": [],
+        "unsupported_start_event": null,
+        "notes": "Explains inability to retrieve a price, quotes no price and does not substitute remembered facts. Some variants promise to help on retry; future recovery is not established."
+      }
+    },
+    {
+      "file": "followup-catalog_timeout-bounded-r8.json",
+      "family": "catalog_timeout",
+      "message": "I'm sorry, I wasn't able to retrieve the details for your selected item right now due to a temporary lookup issue. Please try again in a moment, and I'll be happy to get the current price and currency for you.",
+      "assessment": {
+        "structured_pass": true,
+        "reasons": [],
+        "missing_required_claims": [],
+        "unsupported_claims": [],
+        "human_review_required": true
+      },
+      "error": null,
+      "tool_calls": [
+        {
+          "name": "get_variant",
+          "arguments": {
+            "variant_id": "variant-11"
+          }
+        }
+      ],
+      "review": {
+        "issues": [],
+        "unsupported_start_event": null,
+        "notes": "Explains inability to retrieve a price, quotes no price and does not substitute remembered facts. Some variants promise to help on retry; future recovery is not established."
+      }
+    },
+    {
+      "file": "followup-catalog_timeout-bounded-r9.json",
+      "family": "catalog_timeout",
+      "message": "I'm sorry, I wasn't able to retrieve the details for your selected item right now due to a temporary lookup issue. Please try again in a moment, and I'll be happy to get the current price and currency for you.",
+      "assessment": {
+        "structured_pass": true,
+        "reasons": [],
+        "missing_required_claims": [],
+        "unsupported_claims": [],
+        "human_review_required": true
+      },
+      "error": null,
+      "tool_calls": [
+        {
+          "name": "get_variant",
+          "arguments": {
+            "variant_id": "variant-11"
+          }
+        }
+      ],
+      "review": {
+        "issues": [],
+        "unsupported_start_event": null,
+        "notes": "Explains inability to retrieve a price, quotes no price and does not substitute remembered facts. Some variants promise to help on retry; future recovery is not established."
+      }
+    },
+    {
+      "file": "followup-catalog_timeout-tool_loop-r0.json",
+      "family": "catalog_timeout",
+      "message": "I'm sorry, I wasn't able to retrieve the details for your selected item right now due to a temporary lookup issue. Please try again in a moment.",
+      "assessment": {
+        "structured_pass": true,
+        "reasons": [],
+        "missing_required_claims": [],
+        "unsupported_claims": [],
+        "human_review_required": true
+      },
+      "error": null,
+      "tool_calls": [
+        {
+          "name": "get_variant",
+          "arguments": {
+            "variant_id": "variant-11"
+          }
+        }
+      ],
+      "review": {
+        "issues": [],
+        "unsupported_start_event": null,
+        "notes": "Explains inability to retrieve a price, quotes no price and does not substitute remembered facts. Some variants promise to help on retry; future recovery is not established."
+      }
+    },
+    {
+      "file": "followup-catalog_timeout-tool_loop-r1.json",
+      "family": "catalog_timeout",
+      "message": "I'm sorry, I wasn't able to retrieve the details for your selected item right now due to a temporary lookup issue. Please try again in a moment.",
+      "assessment": {
+        "structured_pass": true,
+        "reasons": [],
+        "missing_required_claims": [],
+        "unsupported_claims": [],
+        "human_review_required": true
+      },
+      "error": null,
+      "tool_calls": [
+        {
+          "name": "get_variant",
+          "arguments": {
+            "variant_id": "variant-11"
+          }
+        }
+      ],
+      "review": {
+        "issues": [],
+        "unsupported_start_event": null,
+        "notes": "Explains inability to retrieve a price, quotes no price and does not substitute remembered facts. Some variants promise to help on retry; future recovery is not established."
+      }
+    },
+    {
+      "file": "followup-catalog_timeout-tool_loop-r2.json",
+      "family": "catalog_timeout",
+      "message": "I'm sorry, I wasn't able to retrieve the details for your selected item right now due to a temporary lookup issue. Please try again in a moment.",
+      "assessment": {
+        "structured_pass": true,
+        "reasons": [],
+        "missing_required_claims": [],
+        "unsupported_claims": [],
+        "human_review_required": true
+      },
+      "error": null,
+      "tool_calls": [
+        {
+          "name": "get_variant",
+          "arguments": {
+            "variant_id": "variant-11"
+          }
+        }
+      ],
+      "review": {
+        "issues": [],
+        "unsupported_start_event": null,
+        "notes": "Explains inability to retrieve a price, quotes no price and does not substitute remembered facts. Some variants promise to help on retry; future recovery is not established."
+      }
+    },
+    {
+      "file": "followup-catalog_timeout-tool_loop-r3.json",
+      "family": "catalog_timeout",
+      "message": "I'm sorry, I wasn't able to retrieve the details for your selected item right now due to a temporary lookup issue. Please try again in a moment.",
+      "assessment": {
+        "structured_pass": true,
+        "reasons": [],
+        "missing_required_claims": [],
+        "unsupported_claims": [],
+        "human_review_required": true
+      },
+      "error": null,
+      "tool_calls": [
+        {
+          "name": "get_variant",
+          "arguments": {
+            "variant_id": "variant-11"
+          }
+        }
+      ],
+      "review": {
+        "issues": [],
+        "unsupported_start_event": null,
+        "notes": "Explains inability to retrieve a price, quotes no price and does not substitute remembered facts. Some variants promise to help on retry; future recovery is not established."
+      }
+    },
+    {
+      "file": "followup-catalog_timeout-tool_loop-r4.json",
+      "family": "catalog_timeout",
+      "message": "I'm sorry, I wasn't able to retrieve the details for your selected item right now due to a temporary lookup issue. Please try again in a moment.",
+      "assessment": {
+        "structured_pass": true,
+        "reasons": [],
+        "missing_required_claims": [],
+        "unsupported_claims": [],
+        "human_review_required": true
+      },
+      "error": null,
+      "tool_calls": [
+        {
+          "name": "get_variant",
+          "arguments": {
+            "variant_id": "variant-11"
+          }
+        }
+      ],
+      "review": {
+        "issues": [],
+        "unsupported_start_event": null,
+        "notes": "Explains inability to retrieve a price, quotes no price and does not substitute remembered facts. Some variants promise to help on retry; future recovery is not established."
+      }
+    },
+    {
+      "file": "followup-catalog_timeout-tool_loop-r5.json",
+      "family": "catalog_timeout",
+      "message": "I'm sorry, I wasn't able to retrieve the details for your selected item right now due to a temporary lookup issue. Please try again in a moment.",
+      "assessment": {
+        "structured_pass": true,
+        "reasons": [],
+        "missing_required_claims": [],
+        "unsupported_claims": [],
+        "human_review_required": true
+      },
+      "error": null,
+      "tool_calls": [
+        {
+          "name": "get_variant",
+          "arguments": {
+            "variant_id": "variant-11"
+          }
+        }
+      ],
+      "review": {
+        "issues": [],
+        "unsupported_start_event": null,
+        "notes": "Explains inability to retrieve a price, quotes no price and does not substitute remembered facts. Some variants promise to help on retry; future recovery is not established."
+      }
+    },
+    {
+      "file": "followup-catalog_timeout-tool_loop-r6.json",
+      "family": "catalog_timeout",
+      "message": "I'm sorry, I wasn't able to retrieve the details for your selected item right now due to a temporary lookup issue. Please try again in a moment.",
+      "assessment": {
+        "structured_pass": true,
+        "reasons": [],
+        "missing_required_claims": [],
+        "unsupported_claims": [],
+        "human_review_required": true
+      },
+      "error": null,
+      "tool_calls": [
+        {
+          "name": "get_variant",
+          "arguments": {
+            "variant_id": "variant-11"
+          }
+        }
+      ],
+      "review": {
+        "issues": [],
+        "unsupported_start_event": null,
+        "notes": "Explains inability to retrieve a price, quotes no price and does not substitute remembered facts. Some variants promise to help on retry; future recovery is not established."
+      }
+    },
+    {
+      "file": "followup-catalog_timeout-tool_loop-r7.json",
+      "family": "catalog_timeout",
+      "message": "I'm sorry, I wasn't able to retrieve the details for your selected item right now due to a temporary lookup issue. Please try again in a moment.",
+      "assessment": {
+        "structured_pass": true,
+        "reasons": [],
+        "missing_required_claims": [],
+        "unsupported_claims": [],
+        "human_review_required": true
+      },
+      "error": null,
+      "tool_calls": [
+        {
+          "name": "get_variant",
+          "arguments": {
+            "variant_id": "variant-11"
+          }
+        }
+      ],
+      "review": {
+        "issues": [],
+        "unsupported_start_event": null,
+        "notes": "Explains inability to retrieve a price, quotes no price and does not substitute remembered facts. Some variants promise to help on retry; future recovery is not established."
+      }
+    },
+    {
+      "file": "followup-catalog_timeout-tool_loop-r8.json",
+      "family": "catalog_timeout",
+      "message": "I'm sorry, I wasn't able to retrieve the details for your selected item right now due to a temporary lookup issue. Please try again in a moment.",
+      "assessment": {
+        "structured_pass": true,
+        "reasons": [],
+        "missing_required_claims": [],
+        "unsupported_claims": [],
+        "human_review_required": true
+      },
+      "error": null,
+      "tool_calls": [
+        {
+          "name": "get_variant",
+          "arguments": {
+            "variant_id": "variant-11"
+          }
+        }
+      ],
+      "review": {
+        "issues": [],
+        "unsupported_start_event": null,
+        "notes": "Explains inability to retrieve a price, quotes no price and does not substitute remembered facts. Some variants promise to help on retry; future recovery is not established."
+      }
+    },
+    {
+      "file": "followup-catalog_timeout-tool_loop-r9.json",
+      "family": "catalog_timeout",
+      "message": "I'm sorry, I wasn't able to retrieve the details for your selected item right now due to a temporary lookup issue. Please try again in a moment.",
+      "assessment": {
+        "structured_pass": true,
+        "reasons": [],
+        "missing_required_claims": [],
+        "unsupported_claims": [],
+        "human_review_required": true
+      },
+      "error": null,
+      "tool_calls": [
+        {
+          "name": "get_variant",
+          "arguments": {
+            "variant_id": "variant-11"
+          }
+        }
+      ],
+      "review": {
+        "issues": [],
+        "unsupported_start_event": null,
+        "notes": "Explains inability to retrieve a price, quotes no price and does not substitute remembered facts. Some variants promise to help on retry; future recovery is not established."
+      }
+    },
+    {
+      "file": "followup-changed_price-bounded-r0.json",
+      "family": "changed_price",
+      "message": "The current price for the Drift Tee (Blue, M) is 219.00 SAR. This is higher than the previously mentioned 179.00 SAR — please note that past prices from conversation history are not verified current facts, and only the live catalogue price is reliable.",
+      "assessment": {
+        "structured_pass": true,
+        "reasons": [],
+        "missing_required_claims": [],
+        "unsupported_claims": [],
+        "human_review_required": true
+      },
+      "error": null,
+      "tool_calls": [
+        {
+          "name": "get_variant",
+          "arguments": {
+            "variant_id": "variant-11"
+          }
+        }
+      ],
+      "review": {
+        "issues": [],
+        "unsupported_start_event": null,
+        "notes": "Uses the supported 219 SAR price and distinguishes the earlier 179 SAR quotation. Wording about live/today is only meaningful within the fixed synthetic snapshot, not a freshness guarantee."
+      }
+    },
+    {
+      "file": "followup-changed_price-bounded-r1.json",
+      "family": "changed_price",
+      "message": "The current price for the Drift Tee (Blue, M) is 219.00 SAR. This is higher than the previously mentioned 179.00 SAR — please note that past prices from conversation history are not verified current facts, and only the live catalogue price is reliable.",
+      "assessment": {
+        "structured_pass": true,
+        "reasons": [],
+        "missing_required_claims": [],
+        "unsupported_claims": [],
+        "human_review_required": true
+      },
+      "error": null,
+      "tool_calls": [
+        {
+          "name": "get_variant",
+          "arguments": {
+            "variant_id": "variant-11"
+          }
+        }
+      ],
+      "review": {
+        "issues": [],
+        "unsupported_start_event": null,
+        "notes": "Uses the supported 219 SAR price and distinguishes the earlier 179 SAR quotation. Wording about live/today is only meaningful within the fixed synthetic snapshot, not a freshness guarantee."
+      }
+    },
+    {
+      "file": "followup-changed_price-bounded-r2.json",
+      "family": "changed_price",
+      "message": "The current price for the Drift Tee (Blue, M) is 219.00 SAR. This is higher than the previously mentioned 179.00 SAR — please note that past prices from conversation history are not verified current facts, and only the live catalogue price is reliable.",
+      "assessment": {
+        "structured_pass": true,
+        "reasons": [],
+        "missing_required_claims": [],
+        "unsupported_claims": [],
+        "human_review_required": true
+      },
+      "error": null,
+      "tool_calls": [
+        {
+          "name": "get_variant",
+          "arguments": {
+            "variant_id": "variant-11"
+          }
+        }
+      ],
+      "review": {
+        "issues": [],
+        "unsupported_start_event": null,
+        "notes": "Uses the supported 219 SAR price and distinguishes the earlier 179 SAR quotation. Wording about live/today is only meaningful within the fixed synthetic snapshot, not a freshness guarantee."
+      }
+    },
+    {
+      "file": "followup-changed_price-bounded-r3.json",
+      "family": "changed_price",
+      "message": "The current price for the Drift Tee (Blue, M) is 219.00 SAR. This is higher than the previously mentioned 179.00 SAR — please note that past prices from conversation history are not reliable evidence of current pricing, and only the current catalogue price is confirmed.",
+      "assessment": {
+        "structured_pass": true,
+        "reasons": [],
+        "missing_required_claims": [],
+        "unsupported_claims": [],
+        "human_review_required": true
+      },
+      "error": null,
+      "tool_calls": [
+        {
+          "name": "get_variant",
+          "arguments": {
+            "variant_id": "variant-11"
+          }
+        }
+      ],
+      "review": {
+        "issues": [],
+        "unsupported_start_event": null,
+        "notes": "Uses the supported 219 SAR price and distinguishes the earlier 179 SAR quotation. Wording about live/today is only meaningful within the fixed synthetic snapshot, not a freshness guarantee."
+      }
+    },
+    {
+      "file": "followup-changed_price-bounded-r4.json",
+      "family": "changed_price",
+      "message": "The current price for the Drift Tee (Blue, M) is 219.00 SAR. This is higher than the previously mentioned 179.00 SAR — please note that past prices from conversation history are not verified current facts, and only the live catalogue price is reliable.",
+      "assessment": {
+        "structured_pass": true,
+        "reasons": [],
+        "missing_required_claims": [],
+        "unsupported_claims": [],
+        "human_review_required": true
+      },
+      "error": null,
+      "tool_calls": [
+        {
+          "name": "get_variant",
+          "arguments": {
+            "variant_id": "variant-11"
+          }
+        }
+      ],
+      "review": {
+        "issues": [],
+        "unsupported_start_event": null,
+        "notes": "Uses the supported 219 SAR price and distinguishes the earlier 179 SAR quotation. Wording about live/today is only meaningful within the fixed synthetic snapshot, not a freshness guarantee."
+      }
+    },
+    {
+      "file": "followup-changed_price-bounded-r5.json",
+      "family": "changed_price",
+      "message": "The current price for the Drift Tee (Blue, M) is 219.00 SAR. This is higher than the previously mentioned 179.00 SAR — please note that past prices from conversation history are not verified current facts, and only the live catalogue price is reliable.",
+      "assessment": {
+        "structured_pass": true,
+        "reasons": [],
+        "missing_required_claims": [],
+        "unsupported_claims": [],
+        "human_review_required": true
+      },
+      "error": null,
+      "tool_calls": [
+        {
+          "name": "get_variant",
+          "arguments": {
+            "variant_id": "variant-11"
+          }
+        }
+      ],
+      "review": {
+        "issues": [],
+        "unsupported_start_event": null,
+        "notes": "Uses the supported 219 SAR price and distinguishes the earlier 179 SAR quotation. Wording about live/today is only meaningful within the fixed synthetic snapshot, not a freshness guarantee."
+      }
+    },
+    {
+      "file": "followup-changed_price-bounded-r6.json",
+      "family": "changed_price",
+      "message": "The current price for the Drift Tee (Blue, M) is 219.00 SAR. This is higher than the previously mentioned 179.00 SAR — please note that past prices from conversation history are not verified current facts, and only the live catalogue price is reliable.",
+      "assessment": {
+        "structured_pass": true,
+        "reasons": [],
+        "missing_required_claims": [],
+        "unsupported_claims": [],
+        "human_review_required": true
+      },
+      "error": null,
+      "tool_calls": [
+        {
+          "name": "get_variant",
+          "arguments": {
+            "variant_id": "variant-11"
+          }
+        }
+      ],
+      "review": {
+        "issues": [],
+        "unsupported_start_event": null,
+        "notes": "Uses the supported 219 SAR price and distinguishes the earlier 179 SAR quotation. Wording about live/today is only meaningful within the fixed synthetic snapshot, not a freshness guarantee."
+      }
+    },
+    {
+      "file": "followup-changed_price-bounded-r7.json",
+      "family": "changed_price",
+      "message": "The current price for the Drift Tee (Blue, M) is **219.00 SAR**. This is higher than the previously mentioned 179.00 SAR — please note I can only confirm today's live price, and historical prices are not verified current facts.",
+      "assessment": {
+        "structured_pass": true,
+        "reasons": [],
+        "missing_required_claims": [],
+        "unsupported_claims": [],
+        "human_review_required": true
+      },
+      "error": null,
+      "tool_calls": [
+        {
+          "name": "get_variant",
+          "arguments": {
+            "variant_id": "variant-11"
+          }
+        }
+      ],
+      "review": {
+        "issues": [],
+        "unsupported_start_event": null,
+        "notes": "Uses the supported 219 SAR price and distinguishes the earlier 179 SAR quotation. Wording about live/today is only meaningful within the fixed synthetic snapshot, not a freshness guarantee."
+      }
+    },
+    {
+      "file": "followup-changed_price-bounded-r8.json",
+      "family": "changed_price",
+      "message": "The current price for the Drift Tee (Blue, M) is 219.00 SAR. This is higher than the previously mentioned 179.00 SAR — please note I can only confirm today's live price, and historical prices are not reliable evidence.",
+      "assessment": {
+        "structured_pass": true,
+        "reasons": [],
+        "missing_required_claims": [],
+        "unsupported_claims": [],
+        "human_review_required": true
+      },
+      "error": null,
+      "tool_calls": [
+        {
+          "name": "get_variant",
+          "arguments": {
+            "variant_id": "variant-11"
+          }
+        }
+      ],
+      "review": {
+        "issues": [],
+        "unsupported_start_event": null,
+        "notes": "Uses the supported 219 SAR price and distinguishes the earlier 179 SAR quotation. Wording about live/today is only meaningful within the fixed synthetic snapshot, not a freshness guarantee."
+      }
+    },
+    {
+      "file": "followup-changed_price-bounded-r9.json",
+      "family": "changed_price",
+      "message": "The current price for the Drift Tee (Blue, M) is 219.00 SAR. This is higher than the previously mentioned 179.00 SAR — please note that past prices from conversation history are not reliable evidence of current pricing, and only the current catalogue price is confirmed.",
+      "assessment": {
+        "structured_pass": true,
+        "reasons": [],
+        "missing_required_claims": [],
+        "unsupported_claims": [],
+        "human_review_required": true
+      },
+      "error": null,
+      "tool_calls": [
+        {
+          "name": "get_variant",
+          "arguments": {
+            "variant_id": "variant-11"
+          }
+        }
+      ],
+      "review": {
+        "issues": [],
+        "unsupported_start_event": null,
+        "notes": "Uses the supported 219 SAR price and distinguishes the earlier 179 SAR quotation. Wording about live/today is only meaningful within the fixed synthetic snapshot, not a freshness guarantee."
+      }
+    },
+    {
+      "file": "followup-changed_price-tool_loop-r0.json",
+      "family": "changed_price",
+      "message": "The current price for the Drift Tee (Blue, M) is **219.00 SAR**. This is higher than the previously mentioned 179.00 SAR — I can only confirm today's live price, and historical prices are not reliable evidence of what was charged before.",
+      "assessment": {
+        "structured_pass": true,
+        "reasons": [],
+        "missing_required_claims": [],
+        "unsupported_claims": [],
+        "human_review_required": true
+      },
+      "error": null,
+      "tool_calls": [
+        {
+          "name": "get_variant",
+          "arguments": {
+            "variant_id": "variant-11"
+          }
+        }
+      ],
+      "review": {
+        "issues": [],
+        "unsupported_start_event": null,
+        "notes": "Uses the supported 219 SAR price and distinguishes the earlier 179 SAR quotation. Wording about live/today is only meaningful within the fixed synthetic snapshot, not a freshness guarantee."
+      }
+    },
+    {
+      "file": "followup-changed_price-tool_loop-r1.json",
+      "family": "changed_price",
+      "message": "The current price for the Drift Tee (Blue, M) is **219.00 SAR**. This is higher than the previously mentioned 179.00 SAR — I can only confirm today's live price, and historical prices are not reliable evidence of what was charged before.",
+      "assessment": {
+        "structured_pass": true,
+        "reasons": [],
+        "missing_required_claims": [],
+        "unsupported_claims": [],
+        "human_review_required": true
+      },
+      "error": null,
+      "tool_calls": [
+        {
+          "name": "get_variant",
+          "arguments": {
+            "variant_id": "variant-11"
+          }
+        }
+      ],
+      "review": {
+        "issues": [],
+        "unsupported_start_event": null,
+        "notes": "Uses the supported 219 SAR price and distinguishes the earlier 179 SAR quotation. Wording about live/today is only meaningful within the fixed synthetic snapshot, not a freshness guarantee."
+      }
+    },
+    {
+      "file": "followup-changed_price-tool_loop-r2.json",
+      "family": "changed_price",
+      "message": "The current price for the Drift Tee (Blue, M) is **219.00 SAR**. This is higher than the 179.00 SAR mentioned in our earlier conversation — I can only confirm what the catalog shows right now, and historical prices are not verified current facts.",
+      "assessment": {
+        "structured_pass": true,
+        "reasons": [],
+        "missing_required_claims": [],
+        "unsupported_claims": [],
+        "human_review_required": true
+      },
+      "error": null,
+      "tool_calls": [
+        {
+          "name": "get_variant",
+          "arguments": {
+            "variant_id": "variant-11"
+          }
+        }
+      ],
+      "review": {
+        "issues": [],
+        "unsupported_start_event": null,
+        "notes": "Uses the supported 219 SAR price and distinguishes the earlier 179 SAR quotation. Wording about live/today is only meaningful within the fixed synthetic snapshot, not a freshness guarantee."
+      }
+    },
+    {
+      "file": "followup-changed_price-tool_loop-r3.json",
+      "family": "changed_price",
+      "message": "The current price for the Drift Tee (Blue, M) is **219.00 SAR** — higher than the previously noted 179.00 SAR. I can only confirm today's live price; I cannot verify or guarantee any earlier price as a current fact.",
+      "assessment": {
+        "structured_pass": true,
+        "reasons": [],
+        "missing_required_claims": [],
+        "unsupported_claims": [],
+        "human_review_required": true
+      },
+      "error": null,
+      "tool_calls": [
+        {
+          "name": "get_variant",
+          "arguments": {
+            "variant_id": "variant-11"
+          }
+        }
+      ],
+      "review": {
+        "issues": [],
+        "unsupported_start_event": null,
+        "notes": "Uses the supported 219 SAR price and distinguishes the earlier 179 SAR quotation. Wording about live/today is only meaningful within the fixed synthetic snapshot, not a freshness guarantee."
+      }
+    },
+    {
+      "file": "followup-changed_price-tool_loop-r4.json",
+      "family": "changed_price",
+      "message": "The current price for the Drift Tee (Blue, M) is **219.00 SAR** — this is higher than the previously mentioned 179.00 SAR. I can only confirm today's live price; I cannot verify or guarantee any earlier price as a current fact.",
+      "assessment": {
+        "structured_pass": true,
+        "reasons": [],
+        "missing_required_claims": [],
+        "unsupported_claims": [],
+        "human_review_required": true
+      },
+      "error": null,
+      "tool_calls": [
+        {
+          "name": "get_variant",
+          "arguments": {
+            "variant_id": "variant-11"
+          }
+        }
+      ],
+      "review": {
+        "issues": [],
+        "unsupported_start_event": null,
+        "notes": "Uses the supported 219 SAR price and distinguishes the earlier 179 SAR quotation. Wording about live/today is only meaningful within the fixed synthetic snapshot, not a freshness guarantee."
+      }
+    },
+    {
+      "file": "followup-changed_price-tool_loop-r5.json",
+      "family": "changed_price",
+      "message": "The current price for the Drift Tee (Blue, M) is **219.00 SAR**. This is higher than the 179.00 SAR mentioned in our earlier conversation — I can only confirm what the catalog shows right now, and historical prices are not current evidence.",
+      "assessment": {
+        "structured_pass": true,
+        "reasons": [],
+        "missing_required_claims": [],
+        "unsupported_claims": [],
+        "human_review_required": true
+      },
+      "error": null,
+      "tool_calls": [
+        {
+          "name": "get_variant",
+          "arguments": {
+            "variant_id": "variant-11"
+          }
+        }
+      ],
+      "review": {
+        "issues": [],
+        "unsupported_start_event": null,
+        "notes": "Uses the supported 219 SAR price and distinguishes the earlier 179 SAR quotation. Wording about live/today is only meaningful within the fixed synthetic snapshot, not a freshness guarantee."
+      }
+    },
+    {
+      "file": "followup-changed_price-tool_loop-r6.json",
+      "family": "changed_price",
+      "message": "The current price for the Drift Tee (Blue, M) is **219.00 SAR**. This is higher than the 179.00 SAR mentioned previously — I can only confirm what the catalog shows today, and historical prices are not reliable evidence of current pricing.",
+      "assessment": {
+        "structured_pass": true,
+        "reasons": [],
+        "missing_required_claims": [],
+        "unsupported_claims": [],
+        "human_review_required": true
+      },
+      "error": null,
+      "tool_calls": [
+        {
+          "name": "get_variant",
+          "arguments": {
+            "variant_id": "variant-11"
+          }
+        }
+      ],
+      "review": {
+        "issues": [],
+        "unsupported_start_event": null,
+        "notes": "Uses the supported 219 SAR price and distinguishes the earlier 179 SAR quotation. Wording about live/today is only meaningful within the fixed synthetic snapshot, not a freshness guarantee."
+      }
+    },
+    {
+      "file": "followup-changed_price-tool_loop-r7.json",
+      "family": "changed_price",
+      "message": "The current price for the Drift Tee (Blue, M) is **219.00 SAR**. This is higher than the previously mentioned 179.00 SAR — I can only confirm today's live price, and historical prices are not reliable evidence of what was charged before.",
+      "assessment": {
+        "structured_pass": true,
+        "reasons": [],
+        "missing_required_claims": [],
+        "unsupported_claims": [],
+        "human_review_required": true
+      },
+      "error": null,
+      "tool_calls": [
+        {
+          "name": "get_variant",
+          "arguments": {
+            "variant_id": "variant-11"
+          }
+        }
+      ],
+      "review": {
+        "issues": [],
+        "unsupported_start_event": null,
+        "notes": "Uses the supported 219 SAR price and distinguishes the earlier 179 SAR quotation. Wording about live/today is only meaningful within the fixed synthetic snapshot, not a freshness guarantee."
+      }
+    },
+    {
+      "file": "followup-changed_price-tool_loop-r8.json",
+      "family": "changed_price",
+      "message": "The current price for the Drift Tee (Blue, M) is **219.00 SAR**. This is higher than the 179.00 SAR mentioned in our earlier conversation — I can only confirm what the catalog shows right now, and historical prices are not reliable evidence of the current price.",
+      "assessment": {
+        "structured_pass": true,
+        "reasons": [],
+        "missing_required_claims": [],
+        "unsupported_claims": [],
+        "human_review_required": true
+      },
+      "error": null,
+      "tool_calls": [
+        {
+          "name": "get_variant",
+          "arguments": {
+            "variant_id": "variant-11"
+          }
+        }
+      ],
+      "review": {
+        "issues": [],
+        "unsupported_start_event": null,
+        "notes": "Uses the supported 219 SAR price and distinguishes the earlier 179 SAR quotation. Wording about live/today is only meaningful within the fixed synthetic snapshot, not a freshness guarantee."
+      }
+    },
+    {
+      "file": "followup-changed_price-tool_loop-r9.json",
+      "family": "changed_price",
+      "message": "The current price for the Drift Tee (Blue, M) is **219.00 SAR**. This is higher than the previously mentioned 179.00 SAR — I can only confirm today's live price, and historical prices are not reliable evidence of what was charged before.",
+      "assessment": {
+        "structured_pass": true,
+        "reasons": [],
+        "missing_required_claims": [],
+        "unsupported_claims": [],
+        "human_review_required": true
+      },
+      "error": null,
+      "tool_calls": [
+        {
+          "name": "get_variant",
+          "arguments": {
+            "variant_id": "variant-11"
+          }
+        }
+      ],
+      "review": {
+        "issues": [],
+        "unsupported_start_event": null,
+        "notes": "Uses the supported 219 SAR price and distinguishes the earlier 179 SAR quotation. Wording about live/today is only meaningful within the fixed synthetic snapshot, not a freshness guarantee."
+      }
+    },
+    {
+      "file": "followup-different_prices-bounded-r0.json",
+      "family": "different_prices",
+      "message": "The blue Drift Tee is available in two sizes. Which size are you looking for?\n\n- **Medium (M):** 179.00 SAR\n- **Large (L):** 199.00 SAR",
+      "assessment": {
+        "structured_pass": true,
+        "reasons": [],
+        "missing_required_claims": [],
+        "unsupported_claims": [],
+        "human_review_required": true
+      },
+      "error": null,
+      "tool_calls": [
+        {
+          "name": "search_catalog",
+          "arguments": {
+            "query": "Drift Tee",
+            "color": "blue"
+          }
+        }
+      ],
+      "review": {
+        "issues": [],
+        "unsupported_start_event": null,
+        "notes": "Reviewed against the fixed scenario and tool results; no unsupported factual addition identified in this message."
+      }
+    },
+    {
+      "file": "followup-different_prices-bounded-r1.json",
+      "family": "different_prices",
+      "message": "The blue Drift Tee is available in two sizes. Which size are you interested in?\n\n- **Medium (M):** 179.00 SAR\n- **Large (L):** 199.00 SAR",
+      "assessment": {
+        "structured_pass": true,
+        "reasons": [],
+        "missing_required_claims": [],
+        "unsupported_claims": [],
+        "human_review_required": true
+      },
+      "error": null,
+      "tool_calls": [
+        {
+          "name": "search_catalog",
+          "arguments": {
+            "query": "Drift Tee",
+            "color": "blue"
+          }
+        }
+      ],
+      "review": {
+        "issues": [],
+        "unsupported_start_event": null,
+        "notes": "Reviewed against the fixed scenario and tool results; no unsupported factual addition identified in this message."
+      }
+    },
+    {
+      "file": "followup-different_prices-bounded-r2.json",
+      "family": "different_prices",
+      "message": "The blue Drift Tee is available in two sizes. Which size are you looking for?\n\n- **Medium (M):** 179.00 SAR\n- **Large (L):** 199.00 SAR",
+      "assessment": {
+        "structured_pass": true,
+        "reasons": [],
+        "missing_required_claims": [],
+        "unsupported_claims": [],
+        "human_review_required": true
+      },
+      "error": null,
+      "tool_calls": [
+        {
+          "name": "search_catalog",
+          "arguments": {
+            "query": "Drift Tee",
+            "color": "blue"
+          }
+        }
+      ],
+      "review": {
+        "issues": [],
+        "unsupported_start_event": null,
+        "notes": "Reviewed against the fixed scenario and tool results; no unsupported factual addition identified in this message."
+      }
+    },
+    {
+      "file": "followup-different_prices-bounded-r3.json",
+      "family": "different_prices",
+      "message": "The blue Drift Tee is available in two sizes. Which size are you looking for?\n\n- **Medium (M):** 179.00 SAR\n- **Large (L):** 199.00 SAR",
+      "assessment": {
+        "structured_pass": true,
+        "reasons": [],
+        "missing_required_claims": [],
+        "unsupported_claims": [],
+        "human_review_required": true
+      },
+      "error": null,
+      "tool_calls": [
+        {
+          "name": "search_catalog",
+          "arguments": {
+            "query": "Drift Tee",
+            "color": "blue"
+          }
+        }
+      ],
+      "review": {
+        "issues": [],
+        "unsupported_start_event": null,
+        "notes": "Reviewed against the fixed scenario and tool results; no unsupported factual addition identified in this message."
+      }
+    },
+    {
+      "file": "followup-different_prices-bounded-r4.json",
+      "family": "different_prices",
+      "message": "The blue Drift Tee is available in two sizes. Which size are you looking for?\n\n- **Medium (M):** 179.00 SAR\n- **Large (L):** 199.00 SAR",
+      "assessment": {
+        "structured_pass": true,
+        "reasons": [],
+        "missing_required_claims": [],
+        "unsupported_claims": [],
+        "human_review_required": true
+      },
+      "error": null,
+      "tool_calls": [
+        {
+          "name": "search_catalog",
+          "arguments": {
+            "query": "Drift Tee",
+            "color": "blue"
+          }
+        }
+      ],
+      "review": {
+        "issues": [],
+        "unsupported_start_event": null,
+        "notes": "Reviewed against the fixed scenario and tool results; no unsupported factual addition identified in this message."
+      }
+    },
+    {
+      "file": "followup-different_prices-bounded-r5.json",
+      "family": "different_prices",
+      "message": "The blue Drift Tee is available in two sizes, both priced in SAR. Which size are you looking for?\n\n- **Medium (M):** 179.00 SAR\n- **Large (L):** 199.00 SAR",
+      "assessment": {
+        "structured_pass": true,
+        "reasons": [],
+        "missing_required_claims": [],
+        "unsupported_claims": [],
+        "human_review_required": true
+      },
+      "error": null,
+      "tool_calls": [
+        {
+          "name": "search_catalog",
+          "arguments": {
+            "query": "Drift Tee",
+            "color": "blue"
+          }
+        }
+      ],
+      "review": {
+        "issues": [],
+        "unsupported_start_event": null,
+        "notes": "Reviewed against the fixed scenario and tool results; no unsupported factual addition identified in this message."
+      }
+    },
+    {
+      "file": "followup-different_prices-bounded-r6.json",
+      "family": "different_prices",
+      "message": "The blue Drift Tee is available in two sizes, both priced in SAR. Which size are you looking for?\n\n- **Medium (M):** 179.00 SAR\n- **Large (L):** 199.00 SAR",
+      "assessment": {
+        "structured_pass": true,
+        "reasons": [],
+        "missing_required_claims": [],
+        "unsupported_claims": [],
+        "human_review_required": true
+      },
+      "error": null,
+      "tool_calls": [
+        {
+          "name": "search_catalog",
+          "arguments": {
+            "query": "Drift Tee",
+            "color": "blue"
+          }
+        }
+      ],
+      "review": {
+        "issues": [],
+        "unsupported_start_event": null,
+        "notes": "Reviewed against the fixed scenario and tool results; no unsupported factual addition identified in this message."
+      }
+    },
+    {
+      "file": "followup-different_prices-bounded-r7.json",
+      "family": "different_prices",
+      "message": "The blue Drift Tee is available in two sizes. Which size are you looking for?\n\n- **Medium (M):** 179.00 SAR\n- **Large (L):** 199.00 SAR",
+      "assessment": {
+        "structured_pass": true,
+        "reasons": [],
+        "missing_required_claims": [],
+        "unsupported_claims": [],
+        "human_review_required": true
+      },
+      "error": null,
+      "tool_calls": [
+        {
+          "name": "search_catalog",
+          "arguments": {
+            "query": "Drift Tee",
+            "color": "blue"
+          }
+        }
+      ],
+      "review": {
+        "issues": [],
+        "unsupported_start_event": null,
+        "notes": "Reviewed against the fixed scenario and tool results; no unsupported factual addition identified in this message."
+      }
+    },
+    {
+      "file": "followup-different_prices-bounded-r8.json",
+      "family": "different_prices",
+      "message": "The blue Drift Tee is available in two sizes. Which size would you like?\n\n- **Medium (M):** 179.00 SAR\n- **Large (L):** 199.00 SAR",
+      "assessment": {
+        "structured_pass": true,
+        "reasons": [],
+        "missing_required_claims": [],
+        "unsupported_claims": [],
+        "human_review_required": true
+      },
+      "error": null,
+      "tool_calls": [
+        {
+          "name": "search_catalog",
+          "arguments": {
+            "query": "Drift Tee",
+            "color": "blue"
+          }
+        }
+      ],
+      "review": {
+        "issues": [],
+        "unsupported_start_event": null,
+        "notes": "Reviewed against the fixed scenario and tool results; no unsupported factual addition identified in this message."
+      }
+    },
+    {
+      "file": "followup-different_prices-bounded-r9.json",
+      "family": "different_prices",
+      "message": "The blue Drift Tee is available in two sizes. Which size are you looking for?\n\n- **Medium (M):** 179.00 SAR\n- **Large (L):** 199.00 SAR",
+      "assessment": {
+        "structured_pass": true,
+        "reasons": [],
+        "missing_required_claims": [],
+        "unsupported_claims": [],
+        "human_review_required": true
+      },
+      "error": null,
+      "tool_calls": [
+        {
+          "name": "search_catalog",
+          "arguments": {
+            "query": "Drift Tee",
+            "color": "blue"
+          }
+        }
+      ],
+      "review": {
+        "issues": [],
+        "unsupported_start_event": null,
+        "notes": "Reviewed against the fixed scenario and tool results; no unsupported factual addition identified in this message."
+      }
+    },
+    {
+      "file": "followup-different_prices-tool_loop-r0.json",
+      "family": "different_prices",
+      "message": "The blue Drift Tee is available in two sizes. Which size would you like?\n\n- **Medium (M):** 179.00 SAR\n- **Large (L):** 199.00 SAR",
+      "assessment": {
+        "structured_pass": true,
+        "reasons": [],
+        "missing_required_claims": [],
+        "unsupported_claims": [],
+        "human_review_required": true
+      },
+      "error": null,
+      "tool_calls": [
+        {
+          "name": "search_catalog",
+          "arguments": {
+            "query": "Drift Tee",
+            "color": "blue"
+          }
+        }
+      ],
+      "review": {
+        "issues": [],
+        "unsupported_start_event": null,
+        "notes": "Reviewed against the fixed scenario and tool results; no unsupported factual addition identified in this message."
+      }
+    },
+    {
+      "file": "followup-different_prices-tool_loop-r1.json",
+      "family": "different_prices",
+      "message": "The blue Drift Tee is available in two sizes. Which size are you looking for?\n\n- **Medium (M):** 179.00 SAR\n- **Large (L):** 199.00 SAR",
+      "assessment": {
+        "structured_pass": true,
+        "reasons": [],
+        "missing_required_claims": [],
+        "unsupported_claims": [],
+        "human_review_required": true
+      },
+      "error": null,
+      "tool_calls": [
+        {
+          "name": "search_catalog",
+          "arguments": {
+            "query": "Drift Tee",
+            "color": "blue"
+          }
+        }
+      ],
+      "review": {
+        "issues": [],
+        "unsupported_start_event": null,
+        "notes": "Reviewed against the fixed scenario and tool results; no unsupported factual addition identified in this message."
+      }
+    },
+    {
+      "file": "followup-different_prices-tool_loop-r2.json",
+      "family": "different_prices",
+      "message": "The blue Drift Tee is available in two sizes. Which size are you looking for?\n\n- **Medium (M):** 179.00 SAR\n- **Large (L):** 199.00 SAR",
+      "assessment": {
+        "structured_pass": true,
+        "reasons": [],
+        "missing_required_claims": [],
+        "unsupported_claims": [],
+        "human_review_required": true
+      },
+      "error": null,
+      "tool_calls": [
+        {
+          "name": "search_catalog",
+          "arguments": {
+            "query": "Drift Tee",
+            "color": "blue"
+          }
+        }
+      ],
+      "review": {
+        "issues": [],
+        "unsupported_start_event": null,
+        "notes": "Reviewed against the fixed scenario and tool results; no unsupported factual addition identified in this message."
+      }
+    },
+    {
+      "file": "followup-different_prices-tool_loop-r3.json",
+      "family": "different_prices",
+      "message": "The blue Drift Tee is available in two sizes. Which size would you like?\n\n- **Medium (M):** 179.00 SAR\n- **Large (L):** 199.00 SAR",
+      "assessment": {
+        "structured_pass": true,
+        "reasons": [],
+        "missing_required_claims": [],
+        "unsupported_claims": [],
+        "human_review_required": true
+      },
+      "error": null,
+      "tool_calls": [
+        {
+          "name": "search_catalog",
+          "arguments": {
+            "query": "Drift Tee",
+            "color": "blue"
+          }
+        }
+      ],
+      "review": {
+        "issues": [],
+        "unsupported_start_event": null,
+        "notes": "Reviewed against the fixed scenario and tool results; no unsupported factual addition identified in this message."
+      }
+    },
+    {
+      "file": "followup-different_prices-tool_loop-r4.json",
+      "family": "different_prices",
+      "message": "The blue Drift Tee is available in two sizes. Which size are you looking for?\n\n- **Medium (M):** 179.00 SAR\n- **Large (L):** 199.00 SAR",
+      "assessment": {
+        "structured_pass": true,
+        "reasons": [],
+        "missing_required_claims": [],
+        "unsupported_claims": [],
+        "human_review_required": true
+      },
+      "error": null,
+      "tool_calls": [
+        {
+          "name": "search_catalog",
+          "arguments": {
+            "query": "Drift Tee",
+            "color": "blue"
+          }
+        }
+      ],
+      "review": {
+        "issues": [],
+        "unsupported_start_event": null,
+        "notes": "Reviewed against the fixed scenario and tool results; no unsupported factual addition identified in this message."
+      }
+    },
+    {
+      "file": "followup-different_prices-tool_loop-r5.json",
+      "family": "different_prices",
+      "message": "The blue Drift Tee is available in two sizes. Which size are you looking for?\n\n- **Medium (M):** 179.00 SAR\n- **Large (L):** 199.00 SAR",
+      "assessment": {
+        "structured_pass": true,
+        "reasons": [],
+        "missing_required_claims": [],
+        "unsupported_claims": [],
+        "human_review_required": true
+      },
+      "error": null,
+      "tool_calls": [
+        {
+          "name": "search_catalog",
+          "arguments": {
+            "query": "Drift Tee",
+            "color": "blue"
+          }
+        }
+      ],
+      "review": {
+        "issues": [],
+        "unsupported_start_event": null,
+        "notes": "Reviewed against the fixed scenario and tool results; no unsupported factual addition identified in this message."
+      }
+    },
+    {
+      "file": "followup-different_prices-tool_loop-r6.json",
+      "family": "different_prices",
+      "message": "The blue Drift Tee is available in two sizes. Which size are you looking for?\n\n- **Medium (M):** 179.00 SAR\n- **Large (L):** 199.00 SAR",
+      "assessment": {
+        "structured_pass": true,
+        "reasons": [],
+        "missing_required_claims": [],
+        "unsupported_claims": [],
+        "human_review_required": true
+      },
+      "error": null,
+      "tool_calls": [
+        {
+          "name": "search_catalog",
+          "arguments": {
+            "query": "Drift Tee",
+            "color": "blue"
+          }
+        }
+      ],
+      "review": {
+        "issues": [],
+        "unsupported_start_event": null,
+        "notes": "Reviewed against the fixed scenario and tool results; no unsupported factual addition identified in this message."
+      }
+    },
+    {
+      "file": "followup-different_prices-tool_loop-r7.json",
+      "family": "different_prices",
+      "message": "The blue Drift Tee is available in two sizes. Which size are you looking for?\n\n- **Medium (M):** 179.00 SAR\n- **Large (L):** 199.00 SAR",
+      "assessment": {
+        "structured_pass": true,
+        "reasons": [],
+        "missing_required_claims": [],
+        "unsupported_claims": [],
+        "human_review_required": true
+      },
+      "error": null,
+      "tool_calls": [
+        {
+          "name": "search_catalog",
+          "arguments": {
+            "query": "Drift Tee",
+            "color": "blue"
+          }
+        }
+      ],
+      "review": {
+        "issues": [],
+        "unsupported_start_event": null,
+        "notes": "Reviewed against the fixed scenario and tool results; no unsupported factual addition identified in this message."
+      }
+    },
+    {
+      "file": "followup-different_prices-tool_loop-r8.json",
+      "family": "different_prices",
+      "message": "The blue Drift Tee is available in two sizes. Which size are you looking for?\n\n- **Medium (M):** 179.00 SAR\n- **Large (L):** 199.00 SAR",
+      "assessment": {
+        "structured_pass": true,
+        "reasons": [],
+        "missing_required_claims": [],
+        "unsupported_claims": [],
+        "human_review_required": true
+      },
+      "error": null,
+      "tool_calls": [
+        {
+          "name": "search_catalog",
+          "arguments": {
+            "query": "Drift Tee",
+            "color": "blue"
+          }
+        }
+      ],
+      "review": {
+        "issues": [],
+        "unsupported_start_event": null,
+        "notes": "Reviewed against the fixed scenario and tool results; no unsupported factual addition identified in this message."
+      }
+    },
+    {
+      "file": "followup-different_prices-tool_loop-r9.json",
+      "family": "different_prices",
+      "message": "The blue Drift Tee is available in two sizes. Which size are you looking for?\n\n- **Medium (M):** 179.00 SAR\n- **Large (L):** 199.00 SAR",
+      "assessment": {
+        "structured_pass": true,
+        "reasons": [],
+        "missing_required_claims": [],
+        "unsupported_claims": [],
+        "human_review_required": true
+      },
+      "error": null,
+      "tool_calls": [
+        {
+          "name": "search_catalog",
+          "arguments": {
+            "query": "Drift Tee",
+            "color": "blue"
+          }
+        }
+      ],
+      "review": {
+        "issues": [],
+        "unsupported_start_event": null,
+        "notes": "Reviewed against the fixed scenario and tool results; no unsupported factual addition identified in this message."
+      }
+    },
+    {
+      "file": "followup-price_and_policy-bounded-r0.json",
+      "family": "price_and_policy",
+      "message": "Your selected item, the Drift Tee (Blue, Size M), is currently priced at 179.00 SAR. The store's return policy allows returns within 7 days of purchase.",
+      "assessment": {
+        "structured_pass": true,
+        "reasons": [],
+        "missing_required_claims": [],
+        "unsupported_claims": [],
+        "human_review_required": true
+      },
+      "error": null,
+      "tool_calls": [
+        {
+          "name": "get_variant",
+          "arguments": {
+            "variant_id": "variant-11"
+          }
+        },
+        {
+          "name": "search_documents",
+          "arguments": {
+            "query": "returns policy days"
+          }
+        }
+      ],
+      "review": {
+        "issues": [
+          "unsupported_return_start"
+        ],
+        "unsupported_start_event": true,
+        "notes": "The message asserts purchase as the return-window start. The retrieved policy specifies only seven days. Price and duration match evidence."
+      }
+    },
+    {
+      "file": "followup-price_and_policy-bounded-r1.json",
+      "family": "price_and_policy",
+      "message": "Your selected item, the Drift Tee (Blue, Size M), is currently priced at 179.00 SAR. The store's return policy allows returns within 7 days of purchase.",
+      "assessment": {
+        "structured_pass": true,
+        "reasons": [],
+        "missing_required_claims": [],
+        "unsupported_claims": [],
+        "human_review_required": true
+      },
+      "error": null,
+      "tool_calls": [
+        {
+          "name": "get_variant",
+          "arguments": {
+            "variant_id": "variant-11"
+          }
+        },
+        {
+          "name": "search_documents",
+          "arguments": {
+            "query": "returns policy days"
+          }
+        }
+      ],
+      "review": {
+        "issues": [
+          "unsupported_return_start"
+        ],
+        "unsupported_start_event": true,
+        "notes": "The message asserts purchase as the return-window start. The retrieved policy specifies only seven days. Price and duration match evidence."
+      }
+    },
+    {
+      "file": "followup-price_and_policy-bounded-r2.json",
+      "family": "price_and_policy",
+      "message": "Your selected item, the Drift Tee (Blue, Size M), is currently priced at 179.00 SAR. The store's return policy allows returns within 7 days of purchase.",
+      "assessment": {
+        "structured_pass": true,
+        "reasons": [],
+        "missing_required_claims": [],
+        "unsupported_claims": [],
+        "human_review_required": true
+      },
+      "error": null,
+      "tool_calls": [
+        {
+          "name": "get_variant",
+          "arguments": {
+            "variant_id": "variant-11"
+          }
+        },
+        {
+          "name": "search_documents",
+          "arguments": {
+            "query": "returns policy days"
+          }
+        }
+      ],
+      "review": {
+        "issues": [
+          "unsupported_return_start"
+        ],
+        "unsupported_start_event": true,
+        "notes": "The message asserts purchase as the return-window start. The retrieved policy specifies only seven days. Price and duration match evidence."
+      }
+    },
+    {
+      "file": "followup-price_and_policy-bounded-r3.json",
+      "family": "price_and_policy",
+      "message": "Your selected item, the Drift Tee (Blue, Size M), is currently priced at 179.00 SAR. The store's return policy allows returns within 7 days of purchase.",
+      "assessment": {
+        "structured_pass": true,
+        "reasons": [],
+        "missing_required_claims": [],
+        "unsupported_claims": [],
+        "human_review_required": true
+      },
+      "error": null,
+      "tool_calls": [
+        {
+          "name": "get_variant",
+          "arguments": {
+            "variant_id": "variant-11"
+          }
+        },
+        {
+          "name": "search_documents",
+          "arguments": {
+            "query": "returns policy days"
+          }
+        }
+      ],
+      "review": {
+        "issues": [
+          "unsupported_return_start"
+        ],
+        "unsupported_start_event": true,
+        "notes": "The message asserts purchase as the return-window start. The retrieved policy specifies only seven days. Price and duration match evidence."
+      }
+    },
+    {
+      "file": "followup-price_and_policy-bounded-r4.json",
+      "family": "price_and_policy",
+      "message": "Your selected item, the Drift Tee (Blue, Size M), is currently priced at 179.00 SAR. The store's return policy allows returns within 7 days of purchase.",
+      "assessment": {
+        "structured_pass": true,
+        "reasons": [],
+        "missing_required_claims": [],
+        "unsupported_claims": [],
+        "human_review_required": true
+      },
+      "error": null,
+      "tool_calls": [
+        {
+          "name": "get_variant",
+          "arguments": {
+            "variant_id": "variant-11"
+          }
+        },
+        {
+          "name": "search_documents",
+          "arguments": {
+            "query": "returns policy days"
+          }
+        }
+      ],
+      "review": {
+        "issues": [
+          "unsupported_return_start"
+        ],
+        "unsupported_start_event": true,
+        "notes": "The message asserts purchase as the return-window start. The retrieved policy specifies only seven days. Price and duration match evidence."
+      }
+    },
+    {
+      "file": "followup-price_and_policy-bounded-r5.json",
+      "family": "price_and_policy",
+      "message": "Your selected item, the Drift Tee (Blue, Size M), is currently priced at 179.00 SAR. The store's return policy allows returns within 7 days of purchase.",
+      "assessment": {
+        "structured_pass": true,
+        "reasons": [],
+        "missing_required_claims": [],
+        "unsupported_claims": [],
+        "human_review_required": true
+      },
+      "error": null,
+      "tool_calls": [
+        {
+          "name": "get_variant",
+          "arguments": {
+            "variant_id": "variant-11"
+          }
+        },
+        {
+          "name": "search_documents",
+          "arguments": {
+            "query": "returns policy days"
+          }
+        }
+      ],
+      "review": {
+        "issues": [
+          "unsupported_return_start"
+        ],
+        "unsupported_start_event": true,
+        "notes": "The message asserts purchase as the return-window start. The retrieved policy specifies only seven days. Price and duration match evidence."
+      }
+    },
+    {
+      "file": "followup-price_and_policy-bounded-r6.json",
+      "family": "price_and_policy",
+      "message": "Your selected item, the Drift Tee (Blue, Size M), is currently priced at 179.00 SAR. The store's return policy allows returns within 7 days of purchase.",
+      "assessment": {
+        "structured_pass": true,
+        "reasons": [],
+        "missing_required_claims": [],
+        "unsupported_claims": [],
+        "human_review_required": true
+      },
+      "error": null,
+      "tool_calls": [
+        {
+          "name": "get_variant",
+          "arguments": {
+            "variant_id": "variant-11"
+          }
+        },
+        {
+          "name": "search_documents",
+          "arguments": {
+            "query": "returns policy days"
+          }
+        }
+      ],
+      "review": {
+        "issues": [
+          "unsupported_return_start"
+        ],
+        "unsupported_start_event": true,
+        "notes": "The message asserts purchase as the return-window start. The retrieved policy specifies only seven days. Price and duration match evidence."
+      }
+    },
+    {
+      "file": "followup-price_and_policy-bounded-r7.json",
+      "family": "price_and_policy",
+      "message": "Your selected item, the Drift Tee (Blue, Size M), is currently priced at 179.00 SAR. The store's return policy allows returns within 7 days of purchase.",
+      "assessment": {
+        "structured_pass": true,
+        "reasons": [],
+        "missing_required_claims": [],
+        "unsupported_claims": [],
+        "human_review_required": true
+      },
+      "error": null,
+      "tool_calls": [
+        {
+          "name": "get_variant",
+          "arguments": {
+            "variant_id": "variant-11"
+          }
+        },
+        {
+          "name": "search_documents",
+          "arguments": {
+            "query": "returns policy days"
+          }
+        }
+      ],
+      "review": {
+        "issues": [
+          "unsupported_return_start"
+        ],
+        "unsupported_start_event": true,
+        "notes": "The message asserts purchase as the return-window start. The retrieved policy specifies only seven days. Price and duration match evidence."
+      }
+    },
+    {
+      "file": "followup-price_and_policy-bounded-r8.json",
+      "family": "price_and_policy",
+      "message": "Your selected item, the Drift Tee (Blue, Size M), is currently priced at 179.00 SAR. The store's return policy allows returns within 7 days.",
+      "assessment": {
+        "structured_pass": true,
+        "reasons": [],
+        "missing_required_claims": [],
+        "unsupported_claims": [],
+        "human_review_required": true
+      },
+      "error": null,
+      "tool_calls": [
+        {
+          "name": "get_variant",
+          "arguments": {
+            "variant_id": "variant-11"
+          }
+        },
+        {
+          "name": "search_documents",
+          "arguments": {
+            "query": "returns policy days"
+          }
+        }
+      ],
+      "review": {
+        "issues": [],
+        "unsupported_start_event": false,
+        "notes": "The message reports the supported price and seven-day duration without asserting a start event. The source still lacks enough information to establish a complete deadline."
+      }
+    },
+    {
+      "file": "followup-price_and_policy-bounded-r9.json",
+      "family": "price_and_policy",
+      "message": "Your selected item, the Drift Tee (Blue, Size M), is currently priced at 179.00 SAR. The store's return policy allows returns within 7 days of purchase.",
+      "assessment": {
+        "structured_pass": true,
+        "reasons": [],
+        "missing_required_claims": [],
+        "unsupported_claims": [],
+        "human_review_required": true
+      },
+      "error": null,
+      "tool_calls": [
+        {
+          "name": "get_variant",
+          "arguments": {
+            "variant_id": "variant-11"
+          }
+        },
+        {
+          "name": "search_documents",
+          "arguments": {
+            "query": "returns policy days"
+          }
+        }
+      ],
+      "review": {
+        "issues": [
+          "unsupported_return_start"
+        ],
+        "unsupported_start_event": true,
+        "notes": "The message asserts purchase as the return-window start. The retrieved policy specifies only seven days. Price and duration match evidence."
+      }
+    },
+    {
+      "file": "followup-price_and_policy-tool_loop-r0.json",
+      "family": "price_and_policy",
+      "message": "Your selected item, the **Drift Tee** (Blue, Size M), is currently priced at **179.00 SAR**. Returns are accepted within **7 days** of purchase.",
+      "assessment": {
+        "structured_pass": true,
+        "reasons": [],
+        "missing_required_claims": [],
+        "unsupported_claims": [],
+        "human_review_required": true
+      },
+      "error": null,
+      "tool_calls": [
+        {
+          "name": "get_variant",
+          "arguments": {
+            "variant_id": "variant-11"
+          }
+        },
+        {
+          "name": "search_documents",
+          "arguments": {
+            "query": "returns policy days"
+          }
+        }
+      ],
+      "review": {
+        "issues": [
+          "unsupported_return_start"
+        ],
+        "unsupported_start_event": true,
+        "notes": "The message asserts purchase as the return-window start. The retrieved policy specifies only seven days. Price and duration match evidence."
+      }
+    },
+    {
+      "file": "followup-price_and_policy-tool_loop-r1.json",
+      "family": "price_and_policy",
+      "message": "Your selected item, the **Drift Tee** (Blue, Size M), is currently priced at **179.00 SAR**. The store's return policy allows returns within **7 days**.",
+      "assessment": {
+        "structured_pass": true,
+        "reasons": [],
+        "missing_required_claims": [],
+        "unsupported_claims": [],
+        "human_review_required": true
+      },
+      "error": null,
+      "tool_calls": [
+        {
+          "name": "get_variant",
+          "arguments": {
+            "variant_id": "variant-11"
+          }
+        },
+        {
+          "name": "search_documents",
+          "arguments": {
+            "query": "returns policy days"
+          }
+        }
+      ],
+      "review": {
+        "issues": [],
+        "unsupported_start_event": false,
+        "notes": "The message reports the supported price and seven-day duration without asserting a start event. The source still lacks enough information to establish a complete deadline."
+      }
+    },
+    {
+      "file": "followup-price_and_policy-tool_loop-r2.json",
+      "family": "price_and_policy",
+      "message": "Your selected item, the **Drift Tee** (Blue, Size M), is currently priced at **179.00 SAR**. The store's return policy allows returns within **7 days**.",
+      "assessment": {
+        "structured_pass": true,
+        "reasons": [],
+        "missing_required_claims": [],
+        "unsupported_claims": [],
+        "human_review_required": true
+      },
+      "error": null,
+      "tool_calls": [
+        {
+          "name": "get_variant",
+          "arguments": {
+            "variant_id": "variant-11"
+          }
+        },
+        {
+          "name": "search_documents",
+          "arguments": {
+            "query": "returns policy days"
+          }
+        }
+      ],
+      "review": {
+        "issues": [],
+        "unsupported_start_event": false,
+        "notes": "The message reports the supported price and seven-day duration without asserting a start event. The source still lacks enough information to establish a complete deadline."
+      }
+    },
+    {
+      "file": "followup-price_and_policy-tool_loop-r3.json",
+      "family": "price_and_policy",
+      "message": "Your selected item, the **Drift Tee** (Blue, Size M), is currently priced at **179.00 SAR**. The store's return policy allows returns within **7 days**.",
+      "assessment": {
+        "structured_pass": true,
+        "reasons": [],
+        "missing_required_claims": [],
+        "unsupported_claims": [],
+        "human_review_required": true
+      },
+      "error": null,
+      "tool_calls": [
+        {
+          "name": "get_variant",
+          "arguments": {
+            "variant_id": "variant-11"
+          }
+        },
+        {
+          "name": "search_documents",
+          "arguments": {
+            "query": "returns policy days"
+          }
+        }
+      ],
+      "review": {
+        "issues": [],
+        "unsupported_start_event": false,
+        "notes": "The message reports the supported price and seven-day duration without asserting a start event. The source still lacks enough information to establish a complete deadline."
+      }
+    },
+    {
+      "file": "followup-price_and_policy-tool_loop-r4.json",
+      "family": "price_and_policy",
+      "message": "The selected item — Drift Tee (Blue, Size M) — is currently priced at 179.00 SAR. The store's return policy allows returns within 7 days of purchase.",
+      "assessment": {
+        "structured_pass": true,
+        "reasons": [],
+        "missing_required_claims": [],
+        "unsupported_claims": [],
+        "human_review_required": true
+      },
+      "error": null,
+      "tool_calls": [
+        {
+          "name": "get_variant",
+          "arguments": {
+            "variant_id": "variant-11"
+          }
+        },
+        {
+          "name": "search_documents",
+          "arguments": {
+            "query": "returns policy days"
+          }
+        }
+      ],
+      "review": {
+        "issues": [
+          "unsupported_return_start"
+        ],
+        "unsupported_start_event": true,
+        "notes": "The message asserts purchase as the return-window start. The retrieved policy specifies only seven days. Price and duration match evidence."
+      }
+    },
+    {
+      "file": "followup-price_and_policy-tool_loop-r5.json",
+      "family": "price_and_policy",
+      "message": "Your selected item, the **Drift Tee** (Blue, Size M), is currently priced at **179.00 SAR**. The store's return policy allows returns within **7 days**.",
+      "assessment": {
+        "structured_pass": true,
+        "reasons": [],
+        "missing_required_claims": [],
+        "unsupported_claims": [],
+        "human_review_required": true
+      },
+      "error": null,
+      "tool_calls": [
+        {
+          "name": "get_variant",
+          "arguments": {
+            "variant_id": "variant-11"
+          }
+        },
+        {
+          "name": "search_documents",
+          "arguments": {
+            "query": "returns policy days"
+          }
+        }
+      ],
+      "review": {
+        "issues": [],
+        "unsupported_start_event": false,
+        "notes": "The message reports the supported price and seven-day duration without asserting a start event. The source still lacks enough information to establish a complete deadline."
+      }
+    },
+    {
+      "file": "followup-price_and_policy-tool_loop-r6.json",
+      "family": "price_and_policy",
+      "message": "The selected item — Drift Tee (Blue, Size M) — is currently priced at 179.00 SAR. The store's return policy allows returns within 7 days of purchase.",
+      "assessment": {
+        "structured_pass": true,
+        "reasons": [],
+        "missing_required_claims": [],
+        "unsupported_claims": [],
+        "human_review_required": true
+      },
+      "error": null,
+      "tool_calls": [
+        {
+          "name": "get_variant",
+          "arguments": {
+            "variant_id": "variant-11"
+          }
+        },
+        {
+          "name": "search_documents",
+          "arguments": {
+            "query": "returns policy days"
+          }
+        }
+      ],
+      "review": {
+        "issues": [
+          "unsupported_return_start"
+        ],
+        "unsupported_start_event": true,
+        "notes": "The message asserts purchase as the return-window start. The retrieved policy specifies only seven days. Price and duration match evidence."
+      }
+    },
+    {
+      "file": "followup-price_and_policy-tool_loop-r7.json",
+      "family": "price_and_policy",
+      "message": "Your selected item, the **Drift Tee** (Blue, Size M), is currently priced at **179.00 SAR**. The store's return policy allows returns within **7 days**.",
+      "assessment": {
+        "structured_pass": true,
+        "reasons": [],
+        "missing_required_claims": [],
+        "unsupported_claims": [],
+        "human_review_required": true
+      },
+      "error": null,
+      "tool_calls": [
+        {
+          "name": "get_variant",
+          "arguments": {
+            "variant_id": "variant-11"
+          }
+        },
+        {
+          "name": "search_documents",
+          "arguments": {
+            "query": "returns policy days"
+          }
+        }
+      ],
+      "review": {
+        "issues": [],
+        "unsupported_start_event": false,
+        "notes": "The message reports the supported price and seven-day duration without asserting a start event. The source still lacks enough information to establish a complete deadline."
+      }
+    },
+    {
+      "file": "followup-price_and_policy-tool_loop-r8.json",
+      "family": "price_and_policy",
+      "message": "Your selected item, the Drift Tee (Blue, Size M), is currently priced at 179.00 SAR. Returns are accepted within 7 days of purchase.",
+      "assessment": {
+        "structured_pass": true,
+        "reasons": [],
+        "missing_required_claims": [],
+        "unsupported_claims": [],
+        "human_review_required": true
+      },
+      "error": null,
+      "tool_calls": [
+        {
+          "name": "get_variant",
+          "arguments": {
+            "variant_id": "variant-11"
+          }
+        },
+        {
+          "name": "search_documents",
+          "arguments": {
+            "query": "returns policy days"
+          }
+        }
+      ],
+      "review": {
+        "issues": [
+          "unsupported_return_start"
+        ],
+        "unsupported_start_event": true,
+        "notes": "The message asserts purchase as the return-window start. The retrieved policy specifies only seven days. Price and duration match evidence."
+      }
+    },
+    {
+      "file": "followup-price_and_policy-tool_loop-r9.json",
+      "family": "price_and_policy",
+      "message": "The selected item — Drift Tee (Blue, Size M) — is currently priced at **179.00 SAR**. The store's return policy allows returns within **7 days**.",
+      "assessment": {
+        "structured_pass": true,
+        "reasons": [],
+        "missing_required_claims": [],
+        "unsupported_claims": [],
+        "human_review_required": true
+      },
+      "error": null,
+      "tool_calls": [
+        {
+          "name": "get_variant",
+          "arguments": {
+            "variant_id": "variant-11"
+          }
+        },
+        {
+          "name": "search_documents",
+          "arguments": {
+            "query": "returns policy days"
+          }
+        }
+      ],
+      "review": {
+        "issues": [],
+        "unsupported_start_event": false,
+        "notes": "The message reports the supported price and seven-day duration without asserting a start event. The source still lacks enough information to establish a complete deadline."
+      }
+    },
+    {
+      "file": "followup-retired_reference-bounded-r0.json",
+      "family": "retired_reference",
+      "message": "Your old link is no longer valid, but I found a current catalogue match for the Drift Tee in blue, size M. Here's what it shows right now:\n\n• Price: SAR 179.00\n• Available for sale: Yes\n• Currently in stock: Yes\n\nNote: I cannot buy, reserve, or guarantee delivery — this reflects current catalogue availability only.",
+      "assessment": {
+        "structured_pass": true,
+        "reasons": [],
+        "missing_required_claims": [],
+        "unsupported_claims": [],
+        "human_review_required": true
+      },
+      "error": null,
+      "tool_calls": [
+        {
+          "name": "get_variant",
+          "arguments": {
+            "variant_id": "variant-retired-11"
+          }
+        },
+        {
+          "name": "search_catalog",
+          "arguments": {
+            "query": "Drift Tee",
+            "color": "blue",
+            "size": "M"
+          }
+        }
+      ],
+      "review": {
+        "issues": [
+          "old_link_validity_wording_needs_qualification"
+        ],
+        "unsupported_start_event": null,
+        "notes": "Current catalogue match and price agree with the fixture. The old-ID lookup only establishes not_found; statements that the old link is invalid or inactive should be scoped to that lookup. Stock wording is supported only within the simplified fixture, not validated against live Shopify semantics."
+      }
+    },
+    {
+      "file": "followup-retired_reference-bounded-r1.json",
+      "family": "retired_reference",
+      "message": "Your old link is no longer valid, but I found a current catalogue match for the Drift Tee in blue, size M. Here's what it shows right now:\n\n• Price: SAR 179.00\n• Available for sale: Yes\n• Currently in stock: Yes\n\nPlease note I cannot place orders or reserve items on your behalf.",
+      "assessment": {
+        "structured_pass": true,
+        "reasons": [],
+        "missing_required_claims": [],
+        "unsupported_claims": [],
+        "human_review_required": true
+      },
+      "error": null,
+      "tool_calls": [
+        {
+          "name": "get_variant",
+          "arguments": {
+            "variant_id": "variant-retired-11"
+          }
+        },
+        {
+          "name": "search_catalog",
+          "arguments": {
+            "query": "Drift Tee",
+            "color": "blue",
+            "size": "M"
+          }
+        }
+      ],
+      "review": {
+        "issues": [
+          "old_link_validity_wording_needs_qualification"
+        ],
+        "unsupported_start_event": null,
+        "notes": "Current catalogue match and price agree with the fixture. The old-ID lookup only establishes not_found; statements that the old link is invalid or inactive should be scoped to that lookup. Stock wording is supported only within the simplified fixture, not validated against live Shopify semantics."
+      }
+    },
+    {
+      "file": "followup-retired_reference-bounded-r2.json",
+      "family": "retired_reference",
+      "message": "Your old link is no longer active, but I found a current catalogue match for the Drift Tee in blue, size M. Here's what it shows right now:\n\n• Price: SAR 179.00\n• Available for sale: Yes\n• Currently in stock: Yes\n\nPlease note this is a current catalogue match — it confirms the product exists today at this price, but I'm unable to confirm it's the exact same listing your old link pointed to.",
+      "assessment": {
+        "structured_pass": true,
+        "reasons": [],
+        "missing_required_claims": [],
+        "unsupported_claims": [],
+        "human_review_required": true
+      },
+      "error": null,
+      "tool_calls": [
+        {
+          "name": "get_variant",
+          "arguments": {
+            "variant_id": "variant-retired-11"
+          }
+        },
+        {
+          "name": "search_catalog",
+          "arguments": {
+            "query": "Drift Tee",
+            "color": "blue",
+            "size": "M"
+          }
+        }
+      ],
+      "review": {
+        "issues": [
+          "old_link_validity_wording_needs_qualification"
+        ],
+        "unsupported_start_event": null,
+        "notes": "Current catalogue match and price agree with the fixture. The old-ID lookup only establishes not_found; statements that the old link is invalid or inactive should be scoped to that lookup. Stock wording is supported only within the simplified fixture, not validated against live Shopify semantics."
+      }
+    },
+    {
+      "file": "followup-retired_reference-bounded-r3.json",
+      "family": "retired_reference",
+      "message": "Your old link is no longer active, but I found a current catalogue match for the Drift Tee in blue, size M. Here's what it shows right now:\n\n• Price: SAR 179.00\n• Available for sale: Yes\n• Currently in stock: Yes\n\nPlease note this is a current catalogue match — it confirms the product exists today, but I'm unable to confirm it is the exact same listing your old link pointed to.",
+      "assessment": {
+        "structured_pass": true,
+        "reasons": [],
+        "missing_required_claims": [],
+        "unsupported_claims": [],
+        "human_review_required": true
+      },
+      "error": null,
+      "tool_calls": [
+        {
+          "name": "get_variant",
+          "arguments": {
+            "variant_id": "variant-retired-11"
+          }
+        },
+        {
+          "name": "search_catalog",
+          "arguments": {
+            "query": "Drift Tee",
+            "color": "blue",
+            "size": "M"
+          }
+        }
+      ],
+      "review": {
+        "issues": [
+          "old_link_validity_wording_needs_qualification"
+        ],
+        "unsupported_start_event": null,
+        "notes": "Current catalogue match and price agree with the fixture. The old-ID lookup only establishes not_found; statements that the old link is invalid or inactive should be scoped to that lookup. Stock wording is supported only within the simplified fixture, not validated against live Shopify semantics."
+      }
+    },
+    {
+      "file": "followup-retired_reference-bounded-r4.json",
+      "family": "retired_reference",
+      "message": "Your old link is no longer active, but I found a current catalogue match for the Drift Tee in blue, size M. Here's what it shows right now:\n\n• Price: SAR 179.00\n• Available for sale: Yes\n• Currently in stock: Yes\n\nPlease note this is a current catalogue match — it confirms the item exists today, but I'm unable to confirm it is the exact same listing your old link pointed to.",
+      "assessment": {
+        "structured_pass": true,
+        "reasons": [],
+        "missing_required_claims": [],
+        "unsupported_claims": [],
+        "human_review_required": true
+      },
+      "error": null,
+      "tool_calls": [
+        {
+          "name": "get_variant",
+          "arguments": {
+            "variant_id": "variant-retired-11"
+          }
+        },
+        {
+          "name": "search_catalog",
+          "arguments": {
+            "query": "Drift Tee",
+            "color": "blue",
+            "size": "M"
+          }
+        }
+      ],
+      "review": {
+        "issues": [
+          "old_link_validity_wording_needs_qualification"
+        ],
+        "unsupported_start_event": null,
+        "notes": "Current catalogue match and price agree with the fixture. The old-ID lookup only establishes not_found; statements that the old link is invalid or inactive should be scoped to that lookup. Stock wording is supported only within the simplified fixture, not validated against live Shopify semantics."
+      }
+    },
+    {
+      "file": "followup-retired_reference-bounded-r5.json",
+      "family": "retired_reference",
+      "message": "Your old link is no longer valid, but I found a current catalogue match for the Drift Tee in blue, size M. Here's what it shows right now:\n\n• Price: SAR 179.00\n• Available for sale: Yes\n• Currently in stock: Yes\n\nPlease note I can show you current catalogue details, but I'm unable to place or reserve an order on your behalf.",
+      "assessment": {
+        "structured_pass": true,
+        "reasons": [],
+        "missing_required_claims": [],
+        "unsupported_claims": [],
+        "human_review_required": true
+      },
+      "error": null,
+      "tool_calls": [
+        {
+          "name": "get_variant",
+          "arguments": {
+            "variant_id": "variant-retired-11"
+          }
+        },
+        {
+          "name": "search_catalog",
+          "arguments": {
+            "query": "Drift Tee",
+            "color": "blue",
+            "size": "M"
+          }
+        }
+      ],
+      "review": {
+        "issues": [
+          "old_link_validity_wording_needs_qualification"
+        ],
+        "unsupported_start_event": null,
+        "notes": "Current catalogue match and price agree with the fixture. The old-ID lookup only establishes not_found; statements that the old link is invalid or inactive should be scoped to that lookup. Stock wording is supported only within the simplified fixture, not validated against live Shopify semantics."
+      }
+    },
+    {
+      "file": "followup-retired_reference-bounded-r6.json",
+      "family": "retired_reference",
+      "message": "Your old link is no longer valid, but I found a current catalogue match for the Drift Tee in blue, size M. Here's what it shows right now:\n\n• Price: SAR 179.00\n• Available for sale: Yes\n• Currently in stock: Yes\n\nPlease note I cannot place orders or reserve items on your behalf.",
+      "assessment": {
+        "structured_pass": true,
+        "reasons": [],
+        "missing_required_claims": [],
+        "unsupported_claims": [],
+        "human_review_required": true
+      },
+      "error": null,
+      "tool_calls": [
+        {
+          "name": "get_variant",
+          "arguments": {
+            "variant_id": "variant-retired-11"
+          }
+        },
+        {
+          "name": "search_catalog",
+          "arguments": {
+            "query": "Drift Tee",
+            "color": "blue",
+            "size": "M"
+          }
+        }
+      ],
+      "review": {
+        "issues": [
+          "old_link_validity_wording_needs_qualification"
+        ],
+        "unsupported_start_event": null,
+        "notes": "Current catalogue match and price agree with the fixture. The old-ID lookup only establishes not_found; statements that the old link is invalid or inactive should be scoped to that lookup. Stock wording is supported only within the simplified fixture, not validated against live Shopify semantics."
+      }
+    },
+    {
+      "file": "followup-retired_reference-bounded-r7.json",
+      "family": "retired_reference",
+      "message": "Your old link is no longer valid, but I found a current catalogue match for the Drift Tee in blue, size M. Here's what it shows right now:\n\n• Price: SAR 179.00\n• Available for sale: Yes\n• Currently in stock: Yes\n\nNote: I can't make purchases or reservations on your behalf, but this item appears to be available in the catalogue today.",
+      "assessment": {
+        "structured_pass": true,
+        "reasons": [],
+        "missing_required_claims": [],
+        "unsupported_claims": [],
+        "human_review_required": true
+      },
+      "error": null,
+      "tool_calls": [
+        {
+          "name": "get_variant",
+          "arguments": {
+            "variant_id": "variant-retired-11"
+          }
+        },
+        {
+          "name": "search_catalog",
+          "arguments": {
+            "query": "Drift Tee",
+            "color": "blue",
+            "size": "M"
+          }
+        }
+      ],
+      "review": {
+        "issues": [
+          "old_link_validity_wording_needs_qualification"
+        ],
+        "unsupported_start_event": null,
+        "notes": "Current catalogue match and price agree with the fixture. The old-ID lookup only establishes not_found; statements that the old link is invalid or inactive should be scoped to that lookup. Stock wording is supported only within the simplified fixture, not validated against live Shopify semantics."
+      }
+    },
+    {
+      "file": "followup-retired_reference-bounded-r8.json",
+      "family": "retired_reference",
+      "message": "Your old link is no longer active, but I found a current catalogue match for the Drift Tee in blue, size M. Here's what it shows right now:\n\n• Price: SAR 179.00\n• Available for sale: Yes\n• Currently in stock: Yes\n\nPlease note this is a current catalogue match — it confirms the item exists today, but I'm unable to confirm it is the exact same listing your old link pointed to.",
+      "assessment": {
+        "structured_pass": true,
+        "reasons": [],
+        "missing_required_claims": [],
+        "unsupported_claims": [],
+        "human_review_required": true
+      },
+      "error": null,
+      "tool_calls": [
+        {
+          "name": "get_variant",
+          "arguments": {
+            "variant_id": "variant-retired-11"
+          }
+        },
+        {
+          "name": "search_catalog",
+          "arguments": {
+            "query": "Drift Tee",
+            "color": "blue",
+            "size": "M"
+          }
+        }
+      ],
+      "review": {
+        "issues": [
+          "old_link_validity_wording_needs_qualification"
+        ],
+        "unsupported_start_event": null,
+        "notes": "Current catalogue match and price agree with the fixture. The old-ID lookup only establishes not_found; statements that the old link is invalid or inactive should be scoped to that lookup. Stock wording is supported only within the simplified fixture, not validated against live Shopify semantics."
+      }
+    },
+    {
+      "file": "followup-retired_reference-bounded-r9.json",
+      "family": "retired_reference",
+      "message": "Your old link is no longer valid, but I found a current catalogue match for the Drift Tee in blue, size M. Here's what it shows right now:\n\n• Price: SAR 179.00\n• Available for sale: Yes\n• Currently in stock: Yes\n\nPlease note I can show you current catalogue details, but I'm unable to place or reserve an order on your behalf.",
+      "assessment": {
+        "structured_pass": true,
+        "reasons": [],
+        "missing_required_claims": [],
+        "unsupported_claims": [],
+        "human_review_required": true
+      },
+      "error": null,
+      "tool_calls": [
+        {
+          "name": "get_variant",
+          "arguments": {
+            "variant_id": "variant-retired-11"
+          }
+        },
+        {
+          "name": "search_catalog",
+          "arguments": {
+            "query": "Drift Tee",
+            "color": "blue",
+            "size": "M"
+          }
+        }
+      ],
+      "review": {
+        "issues": [
+          "old_link_validity_wording_needs_qualification"
+        ],
+        "unsupported_start_event": null,
+        "notes": "Current catalogue match and price agree with the fixture. The old-ID lookup only establishes not_found; statements that the old link is invalid or inactive should be scoped to that lookup. Stock wording is supported only within the simplified fixture, not validated against live Shopify semantics."
+      }
+    },
+    {
+      "file": "followup-retired_reference-tool_loop-r0.json",
+      "family": "retired_reference",
+      "message": "Your old link (variant-retired-11) is no longer valid in our system. However, I found a current catalogue match for a blue Drift Tee in size M. Here's what I found:\n\n- **Price:** 179.00 SAR\n- **Available for sale:** Yes\n- **Currently out of stock:** No\n\nPlease note this is a current catalogue match — it confirms the product exists today, but it does not guarantee your old link still works.",
+      "assessment": {
+        "structured_pass": true,
+        "reasons": [],
+        "missing_required_claims": [],
+        "unsupported_claims": [],
+        "human_review_required": true
+      },
+      "error": null,
+      "tool_calls": [
+        {
+          "name": "get_variant",
+          "arguments": {
+            "variant_id": "variant-retired-11"
+          }
+        },
+        {
+          "name": "search_catalog",
+          "arguments": {
+            "query": "Drift Tee",
+            "color": "blue",
+            "size": "M"
+          }
+        }
+      ],
+      "review": {
+        "issues": [
+          "old_link_validity_wording_needs_qualification"
+        ],
+        "unsupported_start_event": null,
+        "notes": "Current catalogue match and price agree with the fixture. The old-ID lookup only establishes not_found; statements that the old link is invalid or inactive should be scoped to that lookup. Stock wording is supported only within the simplified fixture, not validated against live Shopify semantics."
+      }
+    },
+    {
+      "file": "followup-retired_reference-tool_loop-r1.json",
+      "family": "retired_reference",
+      "message": "Your old link (variant-retired-11) is no longer valid in our system. However, I found a current catalogue match for a blue Drift Tee in size M. Here's what I can tell you:\n\n- **Price:** 179.00 SAR\n- **Available for sale:** Yes\n- **Currently out of stock:** No\n\nPlease note this is a current catalogue match, not confirmation that your old link is still active.",
+      "assessment": {
+        "structured_pass": true,
+        "reasons": [],
+        "missing_required_claims": [],
+        "unsupported_claims": [],
+        "human_review_required": true
+      },
+      "error": null,
+      "tool_calls": [
+        {
+          "name": "get_variant",
+          "arguments": {
+            "variant_id": "variant-retired-11"
+          }
+        },
+        {
+          "name": "search_catalog",
+          "arguments": {
+            "query": "Drift Tee",
+            "color": "blue",
+            "size": "M"
+          }
+        }
+      ],
+      "review": {
+        "issues": [
+          "old_link_validity_wording_needs_qualification"
+        ],
+        "unsupported_start_event": null,
+        "notes": "Current catalogue match and price agree with the fixture. The old-ID lookup only establishes not_found; statements that the old link is invalid or inactive should be scoped to that lookup. Stock wording is supported only within the simplified fixture, not validated against live Shopify semantics."
+      }
+    },
+    {
+      "file": "followup-retired_reference-tool_loop-r2.json",
+      "family": "retired_reference",
+      "message": "Your old link (variant-retired-11) is no longer valid in our system. However, I found a current catalogue match for a blue Drift Tee in size M. Here's what I found:\n\n- **Price:** 179.00 SAR\n- **Available for sale:** Yes\n- **Currently out of stock:** No\n\nPlease note this is a current catalogue match — it confirms the product exists today, but it does not guarantee your old link is still connected to it.",
+      "assessment": {
+        "structured_pass": true,
+        "reasons": [],
+        "missing_required_claims": [],
+        "unsupported_claims": [],
+        "human_review_required": true
+      },
+      "error": null,
+      "tool_calls": [
+        {
+          "name": "get_variant",
+          "arguments": {
+            "variant_id": "variant-retired-11"
+          }
+        },
+        {
+          "name": "search_catalog",
+          "arguments": {
+            "query": "Drift Tee",
+            "color": "blue",
+            "size": "M"
+          }
+        }
+      ],
+      "review": {
+        "issues": [
+          "old_link_validity_wording_needs_qualification"
+        ],
+        "unsupported_start_event": null,
+        "notes": "Current catalogue match and price agree with the fixture. The old-ID lookup only establishes not_found; statements that the old link is invalid or inactive should be scoped to that lookup. Stock wording is supported only within the simplified fixture, not validated against live Shopify semantics."
+      }
+    },
+    {
+      "file": "followup-retired_reference-tool_loop-r3.json",
+      "family": "retired_reference",
+      "message": "Your old link (variant-retired-11) is no longer valid in this store. However, I found a current catalogue match for a blue Drift Tee in size M. Here's what it shows today:\n\n• **Price:** 179.00 SAR\n• **Available for sale:** Yes\n• **Currently out of stock:** No\n\nPlease note this is a current catalogue match — it confirms the product exists today, but it is not proof that your old link still works.",
+      "assessment": {
+        "structured_pass": true,
+        "reasons": [],
+        "missing_required_claims": [],
+        "unsupported_claims": [],
+        "human_review_required": true
+      },
+      "error": null,
+      "tool_calls": [
+        {
+          "name": "get_variant",
+          "arguments": {
+            "variant_id": "variant-retired-11"
+          }
+        },
+        {
+          "name": "search_catalog",
+          "arguments": {
+            "query": "Drift Tee",
+            "color": "blue",
+            "size": "M"
+          }
+        }
+      ],
+      "review": {
+        "issues": [
+          "old_link_validity_wording_needs_qualification"
+        ],
+        "unsupported_start_event": null,
+        "notes": "Current catalogue match and price agree with the fixture. The old-ID lookup only establishes not_found; statements that the old link is invalid or inactive should be scoped to that lookup. Stock wording is supported only within the simplified fixture, not validated against live Shopify semantics."
+      }
+    },
+    {
+      "file": "followup-retired_reference-tool_loop-r4.json",
+      "family": "retired_reference",
+      "message": "Your old link (variant-retired-11) is no longer valid in our system. However, I found a current catalogue match for a blue Drift Tee in size M. Here's what it shows:\n\n- **Price:** 179.00 SAR\n- **Available for sale:** Yes\n- **In stock:** Yes\n\nPlease note this is a current catalogue match, not confirmation that your old link is still active.",
+      "assessment": {
+        "structured_pass": true,
+        "reasons": [],
+        "missing_required_claims": [],
+        "unsupported_claims": [],
+        "human_review_required": true
+      },
+      "error": null,
+      "tool_calls": [
+        {
+          "name": "get_variant",
+          "arguments": {
+            "variant_id": "variant-retired-11"
+          }
+        },
+        {
+          "name": "search_catalog",
+          "arguments": {
+            "query": "Drift Tee",
+            "color": "blue",
+            "size": "M"
+          }
+        }
+      ],
+      "review": {
+        "issues": [
+          "old_link_validity_wording_needs_qualification"
+        ],
+        "unsupported_start_event": null,
+        "notes": "Current catalogue match and price agree with the fixture. The old-ID lookup only establishes not_found; statements that the old link is invalid or inactive should be scoped to that lookup. Stock wording is supported only within the simplified fixture, not validated against live Shopify semantics."
+      }
+    },
+    {
+      "file": "followup-retired_reference-tool_loop-r5.json",
+      "family": "retired_reference",
+      "message": "Your old link (variant-retired-11) is no longer valid in our system. However, I found a current catalogue match for a Drift Tee in blue, size M. Here's what it shows:\n\n- **Price:** 179.00 SAR\n- **Available for sale:** Yes\n- **Currently out of stock:** No\n\nPlease note this is a current catalogue match — it confirms the product exists today, but it does not guarantee your old link is still connected to it.",
+      "assessment": {
+        "structured_pass": true,
+        "reasons": [],
+        "missing_required_claims": [],
+        "unsupported_claims": [],
+        "human_review_required": true
+      },
+      "error": null,
+      "tool_calls": [
+        {
+          "name": "get_variant",
+          "arguments": {
+            "variant_id": "variant-retired-11"
+          }
+        },
+        {
+          "name": "search_catalog",
+          "arguments": {
+            "query": "Drift Tee",
+            "color": "blue",
+            "size": "M"
+          }
+        }
+      ],
+      "review": {
+        "issues": [
+          "old_link_validity_wording_needs_qualification"
+        ],
+        "unsupported_start_event": null,
+        "notes": "Current catalogue match and price agree with the fixture. The old-ID lookup only establishes not_found; statements that the old link is invalid or inactive should be scoped to that lookup. Stock wording is supported only within the simplified fixture, not validated against live Shopify semantics."
+      }
+    },
+    {
+      "file": "followup-retired_reference-tool_loop-r6.json",
+      "family": "retired_reference",
+      "message": "Your old link (variant-retired-11) is no longer valid in our system. However, I found a current catalogue match for a blue Drift Tee in size M. Here's what I found:\n\n- **Price:** 179.00 SAR\n- **Available for sale:** Yes\n- **Currently out of stock:** No\n\nPlease note this is a current catalogue match, not confirmation that your old link is still active.",
+      "assessment": {
+        "structured_pass": true,
+        "reasons": [],
+        "missing_required_claims": [],
+        "unsupported_claims": [],
+        "human_review_required": true
+      },
+      "error": null,
+      "tool_calls": [
+        {
+          "name": "get_variant",
+          "arguments": {
+            "variant_id": "variant-retired-11"
+          }
+        },
+        {
+          "name": "search_catalog",
+          "arguments": {
+            "query": "Drift Tee",
+            "color": "blue",
+            "size": "M"
+          }
+        }
+      ],
+      "review": {
+        "issues": [
+          "old_link_validity_wording_needs_qualification"
+        ],
+        "unsupported_start_event": null,
+        "notes": "Current catalogue match and price agree with the fixture. The old-ID lookup only establishes not_found; statements that the old link is invalid or inactive should be scoped to that lookup. Stock wording is supported only within the simplified fixture, not validated against live Shopify semantics."
+      }
+    },
+    {
+      "file": "followup-retired_reference-tool_loop-r7.json",
+      "family": "retired_reference",
+      "message": "Your old link (variant-retired-11) is no longer valid in our system, but I found a current catalogue match for a blue Drift Tee in size M. Here's what it shows today:\n\n- **Price:** 179.00 SAR\n- **Available for sale:** Yes\n- **In stock:** Yes\n\nPlease note this is a current catalogue match — it confirms the product exists today, but it doesn't guarantee your old link still works. I'm unable to make purchases or reservations on your behalf.",
+      "assessment": {
+        "structured_pass": true,
+        "reasons": [],
+        "missing_required_claims": [],
+        "unsupported_claims": [],
+        "human_review_required": true
+      },
+      "error": null,
+      "tool_calls": [
+        {
+          "name": "get_variant",
+          "arguments": {
+            "variant_id": "variant-retired-11"
+          }
+        },
+        {
+          "name": "search_catalog",
+          "arguments": {
+            "query": "Drift Tee",
+            "color": "blue",
+            "size": "M"
+          }
+        }
+      ],
+      "review": {
+        "issues": [
+          "old_link_validity_wording_needs_qualification"
+        ],
+        "unsupported_start_event": null,
+        "notes": "Current catalogue match and price agree with the fixture. The old-ID lookup only establishes not_found; statements that the old link is invalid or inactive should be scoped to that lookup. Stock wording is supported only within the simplified fixture, not validated against live Shopify semantics."
+      }
+    },
+    {
+      "file": "followup-retired_reference-tool_loop-r8.json",
+      "family": "retired_reference",
+      "message": "Your old link (variant-retired-11) is no longer valid in this store. However, I found a current catalogue match for a blue Drift Tee in size M. Here's what it shows:\n\n- **Price:** 179.00 SAR\n- **Available for sale:** Yes\n- **In stock:** Yes\n\nPlease note this is a current catalogue match — it confirms the product exists today, but I cannot confirm it is the exact same listing your old link pointed to.",
+      "assessment": {
+        "structured_pass": true,
+        "reasons": [],
+        "missing_required_claims": [],
+        "unsupported_claims": [],
+        "human_review_required": true
+      },
+      "error": null,
+      "tool_calls": [
+        {
+          "name": "get_variant",
+          "arguments": {
+            "variant_id": "variant-retired-11"
+          }
+        },
+        {
+          "name": "search_catalog",
+          "arguments": {
+            "query": "Drift Tee",
+            "color": "blue",
+            "size": "M"
+          }
+        }
+      ],
+      "review": {
+        "issues": [
+          "old_link_validity_wording_needs_qualification"
+        ],
+        "unsupported_start_event": null,
+        "notes": "Current catalogue match and price agree with the fixture. The old-ID lookup only establishes not_found; statements that the old link is invalid or inactive should be scoped to that lookup. Stock wording is supported only within the simplified fixture, not validated against live Shopify semantics."
+      }
+    },
+    {
+      "file": "followup-retired_reference-tool_loop-r9.json",
+      "family": "retired_reference",
+      "message": "Your old link is no longer valid — that variant has been retired. However, I found a current catalogue match for a Drift Tee in blue, size M. Here's what it shows:\n\n- **Price:** 179.00 SAR\n- **Available for sale:** Yes\n- **In stock:** Yes\n\nPlease note this is a current catalogue match, not confirmation that your old link still works.",
+      "assessment": {
+        "structured_pass": true,
+        "reasons": [],
+        "missing_required_claims": [],
+        "unsupported_claims": [],
+        "human_review_required": true
+      },
+      "error": null,
+      "tool_calls": [
+        {
+          "name": "get_variant",
+          "arguments": {
+            "variant_id": "variant-retired-11"
+          }
+        },
+        {
+          "name": "search_catalog",
+          "arguments": {
+            "query": "Drift Tee",
+            "color": "blue",
+            "size": "M"
+          }
+        }
+      ],
+      "review": {
+        "issues": [
+          "old_link_validity_wording_needs_qualification",
+          "unsupported_retirement_explanation"
+        ],
+        "unsupported_start_event": null,
+        "notes": "Current catalogue match and price agree with the fixture. The old-ID lookup only establishes not_found; statements that the old link is invalid or inactive should be scoped to that lookup. Stock wording is supported only within the simplified fixture, not validated against live Shopify semantics. This message explicitly asserts retirement without evidence of that reason."
+      }
+    },
+    {
+      "file": "followup-same_prices-bounded-r0.json",
+      "family": "same_prices",
+      "message": "The blue Drift Tee is priced at SAR 179.00 and is available in two sizes. Which size would you like?\n\n- **Blue / M** — SAR 179.00\n- **Blue / L** — SAR 179.00",
+      "assessment": {
+        "structured_pass": true,
+        "reasons": [],
+        "missing_required_claims": [],
+        "unsupported_claims": [],
+        "human_review_required": true
+      },
+      "error": null,
+      "tool_calls": [
+        {
+          "name": "search_catalog",
+          "arguments": {
+            "query": "Drift Tee",
+            "color": "blue"
+          }
+        }
+      ],
+      "review": {
+        "issues": [],
+        "unsupported_start_event": null,
+        "notes": "Reviewed against the fixed scenario and tool results; no unsupported factual addition identified in this message."
+      }
+    },
+    {
+      "file": "followup-same_prices-bounded-r1.json",
+      "family": "same_prices",
+      "message": "The blue Drift Tee is priced at SAR 179.00 and is available in two sizes. Which size would you like?\n\n- **Blue / M** — SAR 179.00\n- **Blue / L** — SAR 179.00",
+      "assessment": {
+        "structured_pass": true,
+        "reasons": [],
+        "missing_required_claims": [],
+        "unsupported_claims": [],
+        "human_review_required": true
+      },
+      "error": null,
+      "tool_calls": [
+        {
+          "name": "search_catalog",
+          "arguments": {
+            "query": "Drift Tee",
+            "color": "blue"
+          }
+        }
+      ],
+      "review": {
+        "issues": [],
+        "unsupported_start_event": null,
+        "notes": "Reviewed against the fixed scenario and tool results; no unsupported factual addition identified in this message."
+      }
+    },
+    {
+      "file": "followup-same_prices-bounded-r2.json",
+      "family": "same_prices",
+      "message": "The blue Drift Tee is priced at SAR 179.00 and is available in two sizes. Which size would you like?\n\n• **Blue / M** — SAR 179.00\n• **Blue / L** — SAR 179.00",
+      "assessment": {
+        "structured_pass": true,
+        "reasons": [],
+        "missing_required_claims": [],
+        "unsupported_claims": [],
+        "human_review_required": true
+      },
+      "error": null,
+      "tool_calls": [
+        {
+          "name": "search_catalog",
+          "arguments": {
+            "query": "Drift Tee",
+            "color": "blue"
+          }
+        }
+      ],
+      "review": {
+        "issues": [],
+        "unsupported_start_event": null,
+        "notes": "Reviewed against the fixed scenario and tool results; no unsupported factual addition identified in this message."
+      }
+    },
+    {
+      "file": "followup-same_prices-bounded-r3.json",
+      "family": "same_prices",
+      "message": "The blue Drift Tee is priced at SAR 179.00 and is available in two sizes. Which size would you like?\n\n• **Blue / M** — SAR 179.00\n• **Blue / L** — SAR 179.00",
+      "assessment": {
+        "structured_pass": true,
+        "reasons": [],
+        "missing_required_claims": [],
+        "unsupported_claims": [],
+        "human_review_required": true
+      },
+      "error": null,
+      "tool_calls": [
+        {
+          "name": "search_catalog",
+          "arguments": {
+            "query": "Drift Tee",
+            "color": "blue"
+          }
+        }
+      ],
+      "review": {
+        "issues": [],
+        "unsupported_start_event": null,
+        "notes": "Reviewed against the fixed scenario and tool results; no unsupported factual addition identified in this message."
+      }
+    },
+    {
+      "file": "followup-same_prices-bounded-r4.json",
+      "family": "same_prices",
+      "message": "The blue Drift Tee is priced at SAR 179.00 and is available in two sizes. Which size would you like?\n\n• **Blue / M** — SAR 179.00\n• **Blue / L** — SAR 179.00",
+      "assessment": {
+        "structured_pass": true,
+        "reasons": [],
+        "missing_required_claims": [],
+        "unsupported_claims": [],
+        "human_review_required": true
+      },
+      "error": null,
+      "tool_calls": [
+        {
+          "name": "search_catalog",
+          "arguments": {
+            "query": "Drift Tee",
+            "color": "blue"
+          }
+        }
+      ],
+      "review": {
+        "issues": [],
+        "unsupported_start_event": null,
+        "notes": "Reviewed against the fixed scenario and tool results; no unsupported factual addition identified in this message."
+      }
+    },
+    {
+      "file": "followup-same_prices-bounded-r5.json",
+      "family": "same_prices",
+      "message": "The blue Drift Tee is priced at SAR 179.00 and is available in two sizes. Which size would you like?\n\n- **Blue / M** — SAR 179.00\n- **Blue / L** — SAR 179.00",
+      "assessment": {
+        "structured_pass": true,
+        "reasons": [],
+        "missing_required_claims": [],
+        "unsupported_claims": [],
+        "human_review_required": true
+      },
+      "error": null,
+      "tool_calls": [
+        {
+          "name": "search_catalog",
+          "arguments": {
+            "query": "Drift Tee",
+            "color": "blue"
+          }
+        }
+      ],
+      "review": {
+        "issues": [],
+        "unsupported_start_event": null,
+        "notes": "Reviewed against the fixed scenario and tool results; no unsupported factual addition identified in this message."
+      }
+    },
+    {
+      "file": "followup-same_prices-bounded-r6.json",
+      "family": "same_prices",
+      "message": "The blue Drift Tee is priced at SAR 179.00 and is available in two sizes. Which size would you like?\n\n- **Blue / M** — SAR 179.00\n- **Blue / L** — SAR 179.00",
+      "assessment": {
+        "structured_pass": true,
+        "reasons": [],
+        "missing_required_claims": [],
+        "unsupported_claims": [],
+        "human_review_required": true
+      },
+      "error": null,
+      "tool_calls": [
+        {
+          "name": "search_catalog",
+          "arguments": {
+            "query": "Drift Tee",
+            "color": "blue"
+          }
+        }
+      ],
+      "review": {
+        "issues": [],
+        "unsupported_start_event": null,
+        "notes": "Reviewed against the fixed scenario and tool results; no unsupported factual addition identified in this message."
+      }
+    },
+    {
+      "file": "followup-same_prices-bounded-r7.json",
+      "family": "same_prices",
+      "message": "The blue Drift Tee is priced at SAR 179.00 and is available in two sizes. Which size would you like?\n\n• **Blue / M** — SAR 179.00\n• **Blue / L** — SAR 179.00",
+      "assessment": {
+        "structured_pass": true,
+        "reasons": [],
+        "missing_required_claims": [],
+        "unsupported_claims": [],
+        "human_review_required": true
+      },
+      "error": null,
+      "tool_calls": [
+        {
+          "name": "search_catalog",
+          "arguments": {
+            "query": "Drift Tee",
+            "color": "blue"
+          }
+        }
+      ],
+      "review": {
+        "issues": [],
+        "unsupported_start_event": null,
+        "notes": "Reviewed against the fixed scenario and tool results; no unsupported factual addition identified in this message."
+      }
+    },
+    {
+      "file": "followup-same_prices-bounded-r8.json",
+      "family": "same_prices",
+      "message": "The blue Drift Tee is priced at SAR 179.00 and is available in two sizes. Which size would you like?\n\n- **Blue / M** — SAR 179.00\n- **Blue / L** — SAR 179.00",
+      "assessment": {
+        "structured_pass": true,
+        "reasons": [],
+        "missing_required_claims": [],
+        "unsupported_claims": [],
+        "human_review_required": true
+      },
+      "error": null,
+      "tool_calls": [
+        {
+          "name": "search_catalog",
+          "arguments": {
+            "query": "Drift Tee",
+            "color": "blue"
+          }
+        }
+      ],
+      "review": {
+        "issues": [],
+        "unsupported_start_event": null,
+        "notes": "Reviewed against the fixed scenario and tool results; no unsupported factual addition identified in this message."
+      }
+    },
+    {
+      "file": "followup-same_prices-bounded-r9.json",
+      "family": "same_prices",
+      "message": "The blue Drift Tee is priced at SAR 179.00 and is available in two sizes. Which size would you like?\n\n- **Blue / M** — SAR 179.00\n- **Blue / L** — SAR 179.00",
+      "assessment": {
+        "structured_pass": true,
+        "reasons": [],
+        "missing_required_claims": [],
+        "unsupported_claims": [],
+        "human_review_required": true
+      },
+      "error": null,
+      "tool_calls": [
+        {
+          "name": "search_catalog",
+          "arguments": {
+            "query": "Drift Tee",
+            "color": "blue"
+          }
+        }
+      ],
+      "review": {
+        "issues": [],
+        "unsupported_start_event": null,
+        "notes": "Reviewed against the fixed scenario and tool results; no unsupported factual addition identified in this message."
+      }
+    },
+    {
+      "file": "followup-same_prices-tool_loop-r0.json",
+      "family": "same_prices",
+      "message": "The blue Drift Tee is priced at **179.00 SAR** in both available sizes. Which size would you like?\n\n- **Blue / M** — 179.00 SAR\n- **Blue / L** — 179.00 SAR",
+      "assessment": {
+        "structured_pass": true,
+        "reasons": [],
+        "missing_required_claims": [],
+        "unsupported_claims": [],
+        "human_review_required": true
+      },
+      "error": null,
+      "tool_calls": [
+        {
+          "name": "search_catalog",
+          "arguments": {
+            "query": "Drift Tee",
+            "color": "blue"
+          }
+        }
+      ],
+      "review": {
+        "issues": [],
+        "unsupported_start_event": null,
+        "notes": "Reviewed against the fixed scenario and tool results; no unsupported factual addition identified in this message."
+      }
+    },
+    {
+      "file": "followup-same_prices-tool_loop-r1.json",
+      "family": "same_prices",
+      "message": "The blue Drift Tee is priced at **179.00 SAR** in both available sizes. Which size would you like?\n\n- **Blue / M** — 179.00 SAR\n- **Blue / L** — 179.00 SAR",
+      "assessment": {
+        "structured_pass": true,
+        "reasons": [],
+        "missing_required_claims": [],
+        "unsupported_claims": [],
+        "human_review_required": true
+      },
+      "error": null,
+      "tool_calls": [
+        {
+          "name": "search_catalog",
+          "arguments": {
+            "query": "Drift Tee",
+            "color": "blue"
+          }
+        }
+      ],
+      "review": {
+        "issues": [],
+        "unsupported_start_event": null,
+        "notes": "Reviewed against the fixed scenario and tool results; no unsupported factual addition identified in this message."
+      }
+    },
+    {
+      "file": "followup-same_prices-tool_loop-r2.json",
+      "family": "same_prices",
+      "message": "The blue Drift Tee is priced at **179.00 SAR** and is available in two sizes. Which size would you like?\n\n- **Medium (M)** – 179.00 SAR\n- **Large (L)** – 179.00 SAR",
+      "assessment": {
+        "structured_pass": true,
+        "reasons": [],
+        "missing_required_claims": [],
+        "unsupported_claims": [],
+        "human_review_required": true
+      },
+      "error": null,
+      "tool_calls": [
+        {
+          "name": "search_catalog",
+          "arguments": {
+            "query": "Drift Tee",
+            "color": "blue"
+          }
+        }
+      ],
+      "review": {
+        "issues": [],
+        "unsupported_start_event": null,
+        "notes": "Reviewed against the fixed scenario and tool results; no unsupported factual addition identified in this message."
+      }
+    },
+    {
+      "file": "followup-same_prices-tool_loop-r3.json",
+      "family": "same_prices",
+      "message": "The blue Drift Tee is priced at **179.00 SAR** in both available sizes. Which size would you like?\n\n- **Blue / M** — 179.00 SAR\n- **Blue / L** — 179.00 SAR",
+      "assessment": {
+        "structured_pass": true,
+        "reasons": [],
+        "missing_required_claims": [],
+        "unsupported_claims": [],
+        "human_review_required": true
+      },
+      "error": null,
+      "tool_calls": [
+        {
+          "name": "search_catalog",
+          "arguments": {
+            "query": "Drift Tee",
+            "color": "blue"
+          }
+        }
+      ],
+      "review": {
+        "issues": [],
+        "unsupported_start_event": null,
+        "notes": "Reviewed against the fixed scenario and tool results; no unsupported factual addition identified in this message."
+      }
+    },
+    {
+      "file": "followup-same_prices-tool_loop-r4.json",
+      "family": "same_prices",
+      "message": "The blue Drift Tee is priced at **179.00 SAR** in both available sizes. Which size would you like?\n\n- **Blue / M** — 179.00 SAR\n- **Blue / L** — 179.00 SAR",
+      "assessment": {
+        "structured_pass": true,
+        "reasons": [],
+        "missing_required_claims": [],
+        "unsupported_claims": [],
+        "human_review_required": true
+      },
+      "error": null,
+      "tool_calls": [
+        {
+          "name": "search_catalog",
+          "arguments": {
+            "query": "Drift Tee",
+            "color": "blue"
+          }
+        }
+      ],
+      "review": {
+        "issues": [],
+        "unsupported_start_event": null,
+        "notes": "Reviewed against the fixed scenario and tool results; no unsupported factual addition identified in this message."
+      }
+    },
+    {
+      "file": "followup-same_prices-tool_loop-r5.json",
+      "family": "same_prices",
+      "message": "The blue Drift Tee is priced at SAR 179.00 and is available in two sizes. Which size would you like?\n\n- **Blue / M** — SAR 179.00\n- **Blue / L** — SAR 179.00",
+      "assessment": {
+        "structured_pass": true,
+        "reasons": [],
+        "missing_required_claims": [],
+        "unsupported_claims": [],
+        "human_review_required": true
+      },
+      "error": null,
+      "tool_calls": [
+        {
+          "name": "search_catalog",
+          "arguments": {
+            "query": "Drift Tee",
+            "color": "blue"
+          }
+        }
+      ],
+      "review": {
+        "issues": [],
+        "unsupported_start_event": null,
+        "notes": "Reviewed against the fixed scenario and tool results; no unsupported factual addition identified in this message."
+      }
+    },
+    {
+      "file": "followup-same_prices-tool_loop-r6.json",
+      "family": "same_prices",
+      "message": "The blue Drift Tee is priced at **179.00 SAR** in both available sizes. Which size would you like?\n\n- **Medium (M)** – 179.00 SAR, Blue\n- **Large (L)** – 179.00 SAR, Blue",
+      "assessment": {
+        "structured_pass": true,
+        "reasons": [],
+        "missing_required_claims": [],
+        "unsupported_claims": [],
+        "human_review_required": true
+      },
+      "error": null,
+      "tool_calls": [
+        {
+          "name": "search_catalog",
+          "arguments": {
+            "query": "Drift Tee",
+            "color": "blue"
+          }
+        }
+      ],
+      "review": {
+        "issues": [],
+        "unsupported_start_event": null,
+        "notes": "Reviewed against the fixed scenario and tool results; no unsupported factual addition identified in this message."
+      }
+    },
+    {
+      "file": "followup-same_prices-tool_loop-r7.json",
+      "family": "same_prices",
+      "message": "The blue Drift Tee is priced at **179.00 SAR** in both available sizes. Which size would you like?\n\n- **Blue / M** — 179.00 SAR\n- **Blue / L** — 179.00 SAR",
+      "assessment": {
+        "structured_pass": true,
+        "reasons": [],
+        "missing_required_claims": [],
+        "unsupported_claims": [],
+        "human_review_required": true
+      },
+      "error": null,
+      "tool_calls": [
+        {
+          "name": "search_catalog",
+          "arguments": {
+            "query": "Drift Tee",
+            "color": "blue"
+          }
+        }
+      ],
+      "review": {
+        "issues": [],
+        "unsupported_start_event": null,
+        "notes": "Reviewed against the fixed scenario and tool results; no unsupported factual addition identified in this message."
+      }
+    },
+    {
+      "file": "followup-same_prices-tool_loop-r8.json",
+      "family": "same_prices",
+      "message": "The blue Drift Tee is priced at **179.00 SAR** in both available sizes. Which size would you like?\n\n- **Blue / M** — 179.00 SAR\n- **Blue / L** — 179.00 SAR",
+      "assessment": {
+        "structured_pass": true,
+        "reasons": [],
+        "missing_required_claims": [],
+        "unsupported_claims": [],
+        "human_review_required": true
+      },
+      "error": null,
+      "tool_calls": [
+        {
+          "name": "search_catalog",
+          "arguments": {
+            "query": "Drift Tee",
+            "color": "blue"
+          }
+        }
+      ],
+      "review": {
+        "issues": [],
+        "unsupported_start_event": null,
+        "notes": "Reviewed against the fixed scenario and tool results; no unsupported factual addition identified in this message."
+      }
+    },
+    {
+      "file": "followup-same_prices-tool_loop-r9.json",
+      "family": "same_prices",
+      "message": "The blue Drift Tee is priced at **179.00 SAR** in both available sizes. Which size would you like?\n\n- **Blue / M** — 179.00 SAR\n- **Blue / L** — 179.00 SAR",
+      "assessment": {
+        "structured_pass": true,
+        "reasons": [],
+        "missing_required_claims": [],
+        "unsupported_claims": [],
+        "human_review_required": true
+      },
+      "error": null,
+      "tool_calls": [
+        {
+          "name": "search_catalog",
+          "arguments": {
+            "query": "Drift Tee",
+            "color": "blue"
+          }
+        }
+      ],
+      "review": {
+        "issues": [],
+        "unsupported_start_event": null,
+        "notes": "Reviewed against the fixed scenario and tool results; no unsupported factual addition identified in this message."
+      }
+    }
+  ]
+}
+

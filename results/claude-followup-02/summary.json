@@ -1,0 +1,27 @@
+{
+  "warning": "Exploratory pilot. Structured assertions are not full answer correctness. Human review required. Local synthetic API; no Shopify integration tested.",
+  "architectures": {
+    "bounded": {
+      "runs": 6,
+      "structured_passes": 6,
+      "errors": 0,
+      "model_calls_total": 12,
+      "model_calls_mean": 2,
+      "tool_calls_total": 8,
+      "elapsed_ms_median": 7531.1095000000005,
+      "prompt_tokens_total": 24964,
+      "completion_tokens_total": 1468
+    },
+    "tool_loop": {
+      "runs": 6,
+      "structured_passes": 6,
+      "errors": 0,
+      "model_calls_total": 12,
+      "model_calls_mean": 2,
+      "tool_calls_total": 8,
+      "elapsed_ms_median": 9058.9655,
+      "prompt_tokens_total": 29434,
+      "completion_tokens_total": 1521
+    }
+  }
+}
