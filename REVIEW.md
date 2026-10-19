@@ -8,7 +8,7 @@ The repeatability check is complete: 120 executions, all passing the structured 
 
 The article now reports the difference rather than treating both workflows as equally prone to the wording. Their shared checker misses this assertion in both paths. Their different final-step schemas and instructions prevent attributing the observed frequencies to one isolated cause.
 
-The companion includes a restricted renderer and a saved-evidence regression test. The renderer was also exercised against all twenty policy responses. It controls its own summary and does not repair the measured model workflows or certify surrounding prose.
+The companion now includes a complete price/policy response path and an [offline replay](results/presentation-replay-05/REVIEW.md) of all twenty saved policy responses. This path replaces the displayed answer for that intent instead of appending a card to model prose. Original model workflows and their recorded results remain unchanged. Separate deterministic tests exercise different policy states.
 
 ## What Haider should review
 
@@ -26,13 +26,13 @@ The coding assistant has checked the implementation, numerical results and the 1
 - [Neutral-ID diagnostic](results/claude-reference-control-03/REVIEW.md): why the retirement example needs qualification.
 - [Policy renderer](storelab/cards.py) and [regression tests](tests/test_cards.py): the narrow code example derived from the finding.
 
-All four runs preserve raw traces, fixtures, manifests and hash-verified source snapshots. Thirty-eight offline tests pass. Across all runs, 142 workflow executions made 284 generation requests. Combined estimated standard API usage is about $2.45; the repetition alone accounts for about $2.08. See individual reports for token counts and rates. These are synthetic examples, not Shopify API tests or customer data.
+All four runs preserve raw traces, fixtures, manifests and hash-verified source snapshots. Forty-eight offline tests pass. Across all runs, 142 workflow executions made 284 generation requests. Combined estimated standard API usage is about $2.45; the repetition alone accounts for about $2.08. See individual reports for token counts and rates. These are synthetic examples, not live commerce API tests or customer data.
 
 ## Publication sequence
 
 Finish the article review, then create the public GitHub companion and add its real URLs to the article. Publish the full article on Medium, with the code and evidence accessible in the repository, and use the shorter native LinkedIn post to introduce it. Keep the full article accessible where possible. This is an editorial recommendation, not a guarantee of distribution or engagement.
 
-Before making the repository public, select an open-source licence and give the final package a disclosure review. The companion now has a local Git repository and no remote. It has not been uploaded. Relative article links must become public URLs when copied to Medium. The LinkedIn draft's last sentence assumes the write-up is available, so publish in that order. Add the article and repository URLs in a first comment when posting; do not invent placeholder URLs in public copy.
+Before making the repository public, select an open-source licence and give the final package a disclosure review. The standalone companion is prepared for publication under the MIT licence. The full article and LinkedIn post have not been published on those platforms. Relative article links must become public URLs when copied to Medium. The LinkedIn draft's last sentence assumes the write-up is available, so publish in that order. Add the article and repository URLs in a first comment when posting; do not invent placeholder URLs in public copy.
 
 The historical local Ollama attempt remains unexecuted. The published evidence, if approved, must be attributed to Claude Sonnet 4.6.
 
@@ -46,7 +46,7 @@ The companion already exists separately from the product repository. Its public 
 
 ## Second review follow-up, 19 October 2026
 
-Accepted: repeat all six cases ten times; explain Cedar as the fictional store; use “sets” for scope; identify the selected item as application context without inventing a prior chat turn; name the displayed-claim coverage rule; add the verified high-level Shopify/LangGraph/pgvector motivation; keep the closing question in first person.
+Accepted: repeat all six cases ten times; explain Cedar as the fictional store; use “sets” for scope; identify the selected item as application context without inventing a prior chat turn; name the displayed-claim coverage rule; add the verified high-level project and stack description; keep the closing question in first person.
 
 The article moves review-method details to the linked evidence report. It does not claim Haider personally reviewed every answer. The LinkedIn draft counts executions, not individual assertions, and refers to synthetic responses rather than messages sent to real customers. No claim about LinkedIn outbound-link suppression was added. Public article and repository URLs are still a publication step.
 
@@ -57,3 +57,9 @@ The article and post now lead with thirteen unsupported start events in twenty r
 The article now explicitly attributes the recorded answer assessment to Codex. Haider's own confirmation is still pending; no reviewer identity or label has been silently changed. After Haider actually reads the twenty messages and states whether the labels are correct, record that review separately with its real date. Then the article can describe that completed review in first person. This pending editorial sentence is deliberately visible in the draft.
 
 The LinkedIn draft includes a specific reader question. Actual article/repository URLs belong in the publication comment once those destinations exist. No outbound-link suppression claim or fake URL was added.
+
+## Completed guided review and response-path example, 19 October 2026
+
+Haider completed the [guided questionnaire](results/claude-repeatability-04/HUMAN-REVIEW.md), confirming thirteen unsupported starts across twenty saved answers. Seven exact wordings represent only two relevant behaviours; they are not seven independent failure modes. The review record explains the guidance provided and does not claim independent agreement. Earlier pending-review notes above describe the historical state.
+
+The final article includes the complete response-path replay and links to its evidence. Forty-eight offline tests pass, including ten new test methods with policy-state cases and all twenty trace replays. These are deterministic application tests, not additional model accuracy measurements. No new model requests were made. The title and historical results are preserved.

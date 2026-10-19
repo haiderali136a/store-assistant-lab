@@ -1,10 +1,10 @@
-# How many LLM calls does a store assistant actually need?
+# Store Assistant Lab
 
 A small Python/LangGraph experiment comparing two ways to answer shopping questions. The store data is fictional. This directory contains no proprietary app implementation or merchant data.
 
 The accompanying [article](ARTICLE.md), “The Return-Policy Detail My Answer Checks Missed”, focuses on an unsupported policy detail that passed the structured checks. Call counts provide background; the tested cases did not require a dependent lookup round.
 
-**Status, 19 October 2026:** 38 offline tests pass. The ten-repeat follow-up completed 120 executions with 120 structured passes. Unsupported purchase-start wording appeared in 9/10 policy answers from the bounded workflow and 4/10 from the loop. All raw traces and per-answer reviews are saved. Start with the [article](ARTICLE.md), [repeatability results](results/claude-repeatability-04/REVIEW.md) or [review guide](REVIEW.md). The companion is a local Git repository; it has not been uploaded. These are synthetic results, not production failure rates.
+**Status, 20 October 2026:** 48 offline tests pass. The ten-repeat follow-up completed 120 executions with 120 structured passes. Unsupported purchase-start wording appeared in 9/10 policy answers from the bounded workflow and 4/10 from the loop. All raw traces and per-answer reviews are saved. Start with the [article](ARTICLE.md), [repeatability results](results/claude-repeatability-04/REVIEW.md) or [review guide](REVIEW.md). These are synthetic results, not production failure rates.
 
 ## The question
 
@@ -34,6 +34,18 @@ python3 -m venv .venv
 ```
 
 The tests use prewritten model outputs. They check routing, accounting, evidence validation and failure handling, not model intelligence.
+
+## Replay the complete price-and-policy reply offline
+
+The [presentation function](storelab/presentation.py) builds the whole displayed reply for a known selected-item price/policy intent from store-scoped tool results. It does not include model prose. The [saved replay](results/presentation-replay-05/REVIEW.md) records twenty before/after responses; it is separate from the original model results.
+
+```bash
+.venv/bin/python -m storelab.presentation_replay \
+  --input results/claude-repeatability-04 \
+  --output results/my-presentation-replay
+```
+
+No API key or model request is needed. Use a new output directory. Tests also cover explicit purchase/delivery starts, missing and failed policy retrieval, conflicting fields, malformed values and scope mismatches. The policy’s start field is a synthetic contract extension in these tests, not information present in the measured tool responses. This is a complete response for one intent, not a general-purpose assistant or a live store integration.
 
 ## Run a real local pilot
 
@@ -111,12 +123,19 @@ Read [METHODOLOGY.md](METHODOLOGY.md) before interpreting output. A `structured_
 - [claude.py](storelab/claude.py): optional Anthropic adapter with credential isolation and a run-wide request cap.
 - [run.py](storelab/run.py): paired runner, manifest, traces and summary.
 - [test_lab.py](tests/test_lab.py): offline harness tests.
-- [cards.py](storelab/cards.py): a separate deterministic return-window renderer, with regression tests against saved evidence.
+- [cards.py](storelab/cards.py): deterministic return-window wording.
+- [presentation.py](storelab/presentation.py): complete price/policy reply using tool evidence, without model prose.
+- [presentation_replay.py](storelab/presentation_replay.py): offline before/after replay with trace and source hashes.
+- [test_presentation.py](tests/test_presentation.py): final-response regression and policy-state cases.
 
-This is an educational experiment, not a Shopify SDK or a deployed store assistant. There is no Shopify authentication, live inventory connection, checkout, refund, or order access.
+This is an educational experiment, not a commerce-platform SDK or a deployed store assistant. There is no live store authentication, inventory connection, checkout, refund, or order access.
 
 ## Related work
 
 Planning retrieval to reduce model round trips already exists in [Amazon REAPER](https://www.amazon.science/publications/reaper-reasoning-based-retrieval-planning-for-complex-rag-systems). [DoorDash](https://careersatdoordash.com/blog/building-ask-doordash-part-5-a-grounded-interface-for-shopping-agents/) describes shopping interfaces grounded in commerce data. [MACS](https://arxiv.org/abs/2608.14068) combines language tasks with deterministic catalog constraints. [RAG mutation testing](https://arxiv.org/abs/2607.26843) already studies behavior when source information changes.
 
 This lab provides an inspectable applied comparison and an example of a gap between checked fields and displayed prose. It does not claim those techniques as inventions.
+
+## Licence
+
+[MIT](LICENSE).

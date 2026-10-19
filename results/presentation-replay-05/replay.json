@@ -1,0 +1,133 @@
+{
+  "kind": "offline_presentation_replay",
+  "model_requests": 0,
+  "input_directory": "claude-repeatability-04",
+  "source_sha256": {
+    "__init__.py": "d292c103821458fafc36cfbdfde86dde96eb566cc9fab720f415110326bde51d",
+    "cards.py": "f7fe45b7a6804843b6f85fed588f7bd681ca4ea5a10a58643f4e09d785da68ef",
+    "presentation.py": "68d8270ad982db6fd966b088170a955c1caa4b37858127af5e11186105d69fff",
+    "presentation_replay.py": "d2b0e1d039a89a80e7e5313ddc87b72cdb09e8d625c289f884698b5f43265945"
+  },
+  "answers": [
+    {
+      "trace": "followup-price_and_policy-bounded-r0.json",
+      "trace_sha256": "b07acd117557d2a6b2775362e3f918aa54aed33431af8be09f38be0f0caeddf0",
+      "before": "Your selected item, the Drift Tee (Blue, Size M), is currently priced at 179.00 SAR. The store's return policy allows returns within 7 days of purchase.",
+      "after": "The selected item's price is 179.00 SAR. The policy lists a 7-day return window. The retrieved details do not specify when that period begins."
+    },
+    {
+      "trace": "followup-price_and_policy-bounded-r1.json",
+      "trace_sha256": "8aeb672b0b6a0160ed6041702dac65ec51430e74ff1c9db3bbeae9820c6dfc83",
+      "before": "Your selected item, the Drift Tee (Blue, Size M), is currently priced at 179.00 SAR. The store's return policy allows returns within 7 days of purchase.",
+      "after": "The selected item's price is 179.00 SAR. The policy lists a 7-day return window. The retrieved details do not specify when that period begins."
+    },
+    {
+      "trace": "followup-price_and_policy-bounded-r2.json",
+      "trace_sha256": "eb1b5c7f8eba37ff88b8199e57c03f3bf299156c0324a2168abf2f59496bcb24",
+      "before": "Your selected item, the Drift Tee (Blue, Size M), is currently priced at 179.00 SAR. The store's return policy allows returns within 7 days of purchase.",
+      "after": "The selected item's price is 179.00 SAR. The policy lists a 7-day return window. The retrieved details do not specify when that period begins."
+    },
+    {
+      "trace": "followup-price_and_policy-bounded-r3.json",
+      "trace_sha256": "147b4e4a45e09ca019c705ed950a284b20c583688e95e0ccbee94fd02bddd15e",
+      "before": "Your selected item, the Drift Tee (Blue, Size M), is currently priced at 179.00 SAR. The store's return policy allows returns within 7 days of purchase.",
+      "after": "The selected item's price is 179.00 SAR. The policy lists a 7-day return window. The retrieved details do not specify when that period begins."
+    },
+    {
+      "trace": "followup-price_and_policy-bounded-r4.json",
+      "trace_sha256": "f0b1d21a6489e6dfe9b52dbc41fc2ed8e7181ca3e67273f5a7d20ff91d3c545b",
+      "before": "Your selected item, the Drift Tee (Blue, Size M), is currently priced at 179.00 SAR. The store's return policy allows returns within 7 days of purchase.",
+      "after": "The selected item's price is 179.00 SAR. The policy lists a 7-day return window. The retrieved details do not specify when that period begins."
+    },
+    {
+      "trace": "followup-price_and_policy-bounded-r5.json",
+      "trace_sha256": "d385d0d7b56f931bdf7a1093fe8d3e29408f5b728656c9c2bbe388a9d6242ba8",
+      "before": "Your selected item, the Drift Tee (Blue, Size M), is currently priced at 179.00 SAR. The store's return policy allows returns within 7 days of purchase.",
+      "after": "The selected item's price is 179.00 SAR. The policy lists a 7-day return window. The retrieved details do not specify when that period begins."
+    },
+    {
+      "trace": "followup-price_and_policy-bounded-r6.json",
+      "trace_sha256": "8b36703c64a482e3a44ca982391afd3192a59fbe44484afb78fca2b65e6c8c46",
+      "before": "Your selected item, the Drift Tee (Blue, Size M), is currently priced at 179.00 SAR. The store's return policy allows returns within 7 days of purchase.",
+      "after": "The selected item's price is 179.00 SAR. The policy lists a 7-day return window. The retrieved details do not specify when that period begins."
+    },
+    {
+      "trace": "followup-price_and_policy-bounded-r7.json",
+      "trace_sha256": "9811bfad38ae9264ac6eb690d265a9c9c34b0d4fd18d5028aed1b79dcdeb2429",
+      "before": "Your selected item, the Drift Tee (Blue, Size M), is currently priced at 179.00 SAR. The store's return policy allows returns within 7 days of purchase.",
+      "after": "The selected item's price is 179.00 SAR. The policy lists a 7-day return window. The retrieved details do not specify when that period begins."
+    },
+    {
+      "trace": "followup-price_and_policy-bounded-r8.json",
+      "trace_sha256": "44aba55af5acf3f8182ef604071c2574bb44b6dd4ba83562844aba769aeebd50",
+      "before": "Your selected item, the Drift Tee (Blue, Size M), is currently priced at 179.00 SAR. The store's return policy allows returns within 7 days.",
+      "after": "The selected item's price is 179.00 SAR. The policy lists a 7-day return window. The retrieved details do not specify when that period begins."
+    },
+    {
+      "trace": "followup-price_and_policy-bounded-r9.json",
+      "trace_sha256": "827752930d58f0204b9ba424492bb03a9aea15217072e8a679b1a153359fa04e",
+      "before": "Your selected item, the Drift Tee (Blue, Size M), is currently priced at 179.00 SAR. The store's return policy allows returns within 7 days of purchase.",
+      "after": "The selected item's price is 179.00 SAR. The policy lists a 7-day return window. The retrieved details do not specify when that period begins."
+    },
+    {
+      "trace": "followup-price_and_policy-tool_loop-r0.json",
+      "trace_sha256": "e9025da22cf2c835e63d459ddb7f92bd74d47a32d293cd76ffc5b94eeb07bac7",
+      "before": "Your selected item, the **Drift Tee** (Blue, Size M), is currently priced at **179.00 SAR**. Returns are accepted within **7 days** of purchase.",
+      "after": "The selected item's price is 179.00 SAR. The policy lists a 7-day return window. The retrieved details do not specify when that period begins."
+    },
+    {
+      "trace": "followup-price_and_policy-tool_loop-r1.json",
+      "trace_sha256": "b57412288b57a24572d179a7ae4a130e4f8983b6448a4b64c2a73d9996c1fdbf",
+      "before": "Your selected item, the **Drift Tee** (Blue, Size M), is currently priced at **179.00 SAR**. The store's return policy allows returns within **7 days**.",
+      "after": "The selected item's price is 179.00 SAR. The policy lists a 7-day return window. The retrieved details do not specify when that period begins."
+    },
+    {
+      "trace": "followup-price_and_policy-tool_loop-r2.json",
+      "trace_sha256": "4e892ff48fc712c5f139a1ba0ddd9125ca7f8001a370087fe9154f9110e53f49",
+      "before": "Your selected item, the **Drift Tee** (Blue, Size M), is currently priced at **179.00 SAR**. The store's return policy allows returns within **7 days**.",
+      "after": "The selected item's price is 179.00 SAR. The policy lists a 7-day return window. The retrieved details do not specify when that period begins."
+    },
+    {
+      "trace": "followup-price_and_policy-tool_loop-r3.json",
+      "trace_sha256": "c5aa819fa0356431bb833a2bfa84c3e6c605105e5f1770ae824108c369d1209c",
+      "before": "Your selected item, the **Drift Tee** (Blue, Size M), is currently priced at **179.00 SAR**. The store's return policy allows returns within **7 days**.",
+      "after": "The selected item's price is 179.00 SAR. The policy lists a 7-day return window. The retrieved details do not specify when that period begins."
+    },
+    {
+      "trace": "followup-price_and_policy-tool_loop-r4.json",
+      "trace_sha256": "162ac051b4f4ce58dba1ba5f4065d54d7e1c92f4ad1855f7d4e3fcded179d9ff",
+      "before": "The selected item \u2014 Drift Tee (Blue, Size M) \u2014 is currently priced at 179.00 SAR. The store's return policy allows returns within 7 days of purchase.",
+      "after": "The selected item's price is 179.00 SAR. The policy lists a 7-day return window. The retrieved details do not specify when that period begins."
+    },
+    {
+      "trace": "followup-price_and_policy-tool_loop-r5.json",
+      "trace_sha256": "e4950c703500d8a8504e51912934bbfc0c894c5ffbed13c66c2d329d8ccaf803",
+      "before": "Your selected item, the **Drift Tee** (Blue, Size M), is currently priced at **179.00 SAR**. The store's return policy allows returns within **7 days**.",
+      "after": "The selected item's price is 179.00 SAR. The policy lists a 7-day return window. The retrieved details do not specify when that period begins."
+    },
+    {
+      "trace": "followup-price_and_policy-tool_loop-r6.json",
+      "trace_sha256": "3a46022fc52aebc0f7529e9fcf415893598153c1ea22148c39fbe9a6b3d401f4",
+      "before": "The selected item \u2014 Drift Tee (Blue, Size M) \u2014 is currently priced at 179.00 SAR. The store's return policy allows returns within 7 days of purchase.",
+      "after": "The selected item's price is 179.00 SAR. The policy lists a 7-day return window. The retrieved details do not specify when that period begins."
+    },
+    {
+      "trace": "followup-price_and_policy-tool_loop-r7.json",
+      "trace_sha256": "d68ca0107339c2121f2622e6a2a34a857c964e8f43b4d6deff4d68257e50cf3b",
+      "before": "Your selected item, the **Drift Tee** (Blue, Size M), is currently priced at **179.00 SAR**. The store's return policy allows returns within **7 days**.",
+      "after": "The selected item's price is 179.00 SAR. The policy lists a 7-day return window. The retrieved details do not specify when that period begins."
+    },
+    {
+      "trace": "followup-price_and_policy-tool_loop-r8.json",
+      "trace_sha256": "a7837ef738b4be2333b89b95e283f6b804918d32ff791cdce990af0d161df40b",
+      "before": "Your selected item, the Drift Tee (Blue, Size M), is currently priced at 179.00 SAR. Returns are accepted within 7 days of purchase.",
+      "after": "The selected item's price is 179.00 SAR. The policy lists a 7-day return window. The retrieved details do not specify when that period begins."
+    },
+    {
+      "trace": "followup-price_and_policy-tool_loop-r9.json",
+      "trace_sha256": "e25c9db02ce527648f08bb9ae807bce617cdc9aa56403c5a7fa691c663611b6a",
+      "before": "The selected item \u2014 Drift Tee (Blue, Size M) \u2014 is currently priced at **179.00 SAR**. The store's return policy allows returns within **7 days**.",
+      "after": "The selected item's price is 179.00 SAR. The policy lists a 7-day return window. The retrieved details do not specify when that period begins."
+    }
+  ]
+}

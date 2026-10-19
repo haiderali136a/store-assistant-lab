@@ -2,9 +2,9 @@
 
 A small LangGraph experiment on the gap between checked fields and the answer a customer reads.
 
-In twenty repeated answers to a synthetic return-policy question, the assistant added an unsupported purchase start date thirteen times. All twenty answers passed the structured checks. Those checks verified the seven-day duration without checking every claim in the displayed answer.
+In twenty repeated answers to a synthetic return-policy question, the assistant said the window started at purchase in thirteen of them. All twenty answers passed the structured checks. Those checks verified the seven-day duration without checking every claim in the displayed answer.
 
-While working on a multi-store Shopify assistant using LangGraph and pgvector retrieval, I built this separate experiment with fictional catalogue data. I originally wanted to compare a workflow with one round of tool use against one that could request further rounds. The return-policy answer gave me a more specific problem to investigate.
+While working on a multi-store AI assistant using LangGraph and pgvector retrieval, I built this separate experiment with fictional catalogue data. I originally wanted to compare a workflow with one round of tool use against one that could request further rounds. The return-policy answer gave me a more specific problem to investigate.
 
 ## What the source said, and what the customer would see
 
@@ -18,7 +18,7 @@ The test question asked for the current price and return window of an item alrea
 }
 ```
 
-In that initial run, both workflows included this sentence in their answers:
+One of the repeated answers included this sentence:
 
 > The store's return policy allows returns within 7 days of purchase.
 
@@ -37,9 +37,9 @@ Each model answer contained a customer-facing message and a list of factual clai
 }
 ```
 
-`cedar` identifies the fictional store whose return policy was retrieved. The return window belongs to that store's policy.
+`cedar` identifies the fictional store whose return policy was retrieved.
 
-The checker confirmed that the requested value matched the retrieved evidence. It also checked whether the assistant answered or correctly explained that it could not verify something. These are the lab's *structured assertions*: checks on specific output fields.
+The checker matched the required factual claims and their evidence references to the tool results. It also checked that the answer's `status` field matched the expected outcome, such as `answered` or `unavailable`. These are the lab's *structured assertions*: checks on specific output fields, not on the explanation written to the customer.
 
 The seven-day claim passed correctly. But the message contained an additional claim about purchase, and the output had no field representing that start event. The checker never examined it.
 
@@ -70,9 +70,23 @@ The renderer validates the duration. If the policy record explicitly supplies th
 
 I chose ordinary code because this summary has a small number of supported fields and predictable wording. A stricter prompt is another option, but would need testing. Checking every assertion in free-form prose, possibly with another model, would cover a broader kind of answer and introduce its own validation work. I have not compared those approaches here.
 
-The renderer needs no model request, and its regression test uses the policy evidence saved from the run. It was added afterwards as a separate example, so it is not counted as an improvement in the original workflow results.
+A correct summary beside an unrestricted model answer would still leave the same failure possible. The application could show the careful summary and then repeat “of purchase” underneath it.
 
-This is a return-window summary, not a decision about eligibility. The application still needs the right merchant policy, its exclusions and current terms. Also, showing a correct card beside an unrestricted model answer would leave room for the same unsupported sentence elsewhere. The card only controls the text it renders.
+## Check the complete displayed reply
+
+I added a [response function](storelab/presentation.py) for this specific intent: the selected item’s price and return window. It builds the entire displayed reply from the tool results. It does not append the model’s message or interpolate document prose. The application supplies the store, market and selected item; retrieval must already be scoped to that store.
+
+I replayed the twenty saved tool responses through this path. Each produced:
+
+> The selected item's price is 179.00 SAR. The policy lists a 7-day return window. The retrieved details do not specify when that period begins.
+
+The [before-and-after record](results/presentation-replay-05/replay.json) preserves both messages and hashes of the source traces. This was an offline presentation change, with no new model requests. It does not change the original workflow results or demonstrate a more accurate model.
+
+Repetition only tests the same missing information again. To exercise different decisions, the [response tests](tests/test_presentation.py) also supply an explicit purchase start, an explicit delivery start, conflicting policy fields, and missing or failed policy retrieval. Supported starts are displayed as supplied. When policy fields conflict, the reply says: “The retrieved policies disagree; I could not verify the return window.” If policy retrieval fails, it keeps the supported price and says it could not verify the window. Malformed fields and an unrecognised start event also cause the function to withhold the window.
+
+The regression checks the complete returned text. Replacing the saved model answer with an unsupported sentence does not change it. The response function never reads that message.
+
+This trades flexible wording for control over a small response format. It is still not a return-eligibility decision. Upstream code must establish merchant scope, source freshness and accurate field extraction. Conflict checks compare the supplied fields; they cannot discover contradictions hidden in document prose. Exclusions and broader questions need their own handling.
 
 ## The experiment and repeated runs
 
@@ -94,15 +108,23 @@ These cases did not require a lookup whose input depended on an earlier result. 
 
 Another case returned `not_found` for an old product ID. Several answers said “Your old link is no longer valid”, although the tool had looked up an ID, not tested the link itself. That stronger statement also passed the structured checks.
 
-The ID contained the word `retired`. In the original paired run, both answers claimed the variant had been retired. Across twenty repeat executions with that same ID, only one did: the loop's final repetition. A separate paired diagnostic with an opaque ID produced no retirement claim. These observations do not establish that the descriptive ID caused the wording, so the diagnostic cannot be presented as a demonstrated explanation.
+The ID contained the word `retired`. In the original paired run, both answers claimed the variant had been retired. Across twenty repeat executions with that same ID, only one did: the loop's final repetition. A separate paired diagnostic with an opaque ID produced no retirement claim. These observations do not establish that the descriptive ID caused the wording.
 
 ## Scope and reproduction
 
-These synthetic cases were selected during development. There is no live Shopify integration or independent set of customer questions. The workflows use a custom JSON-schema protocol. Temperature 0 does not guarantee identical repetitions, and the observed counts are not production failure rates.
+These synthetic cases were selected during development. There is no live store integration or independent set of customer questions. The workflows use a custom JSON-schema protocol. Temperature 0 does not guarantee identical repetitions, and the observed counts are not production failure rates.
 
-Codex performed the recorded answer review. The [review file](results/claude-repeatability-04/POLICY-ANSWERS.md) preserves all twenty policy messages alongside those assessments. The experiment does not validate live source freshness.
+I checked the twenty saved policy answers, grouped into seven exact wordings, against the retrieved policy in a [guided review](results/claude-repeatability-04/HUMAN-REVIEW.md). These represent two behaviours: adding a purchase start or leaving the start unstated. The [review file](results/claude-repeatability-04/POLICY-ANSWERS.md) preserves all twenty policy messages alongside the original Codex assessments. The experiment does not validate live source freshness.
 
-The [companion lab](README.md) contains the fixtures, raw traces, source snapshots and the [renderer](storelab/cards.py). After the README setup, the comparison can be rerun with:
+The [companion lab](README.md) contains the fixtures, raw traces, source snapshots and the [renderer](storelab/cards.py). After the README setup, replay the saved responses locally without an API key:
+
+```bash
+python -m storelab.presentation_replay \
+  --input results/claude-repeatability-04 \
+  --output results/my-presentation-replay
+```
+
+To rerun the original model comparison instead:
 
 ```bash
 python -m storelab.run \
@@ -113,4 +135,4 @@ python -m storelab.run \
 
 This calls a paid API; the request cap limits attempts, not dollar spending. Existing results are preserved separately.
 
-In this example, verifying "seven days" left "from purchase" unchecked. The renderer makes that missing information explicit in the summary. When reviewing another assistant, I would ask: which factual claims in the displayed answer are actually covered by its checks?
+In this example, verifying "seven days" left "from purchase" unchecked. Building the complete reply from supported fields makes that missing information explicit without reintroducing the unchecked sentence. When reviewing another assistant, I would ask: which factual claims in the displayed answer are actually covered by its checks?

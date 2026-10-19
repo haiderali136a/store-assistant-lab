@@ -1,11 +1,15 @@
-In a store-assistant experiment, an unsupported purchase start date appeared in 13 of 20 answers to the same return-policy question. All twenty passed the structured checks.
+A return-policy answer passed my automated checks even though it added a condition the policy never stated.
 
-The source said seven days. The answers added “of purchase”, although nothing specified when the period began. The checks verified the duration and evidence reference without checking every claim in the displayed answer.
+This came from a LangGraph experiment alongside my work on a multi-store AI assistant. I was comparing two workflows using fictional store data.
 
-These were repeated synthetic inputs across two workflows, not customer traffic or a production failure rate. The article includes the per-workflow counts and their limitations.
+One question asked for an item's price and how many days the customer had to return it. The retrieved policy supplied seven days. Several answers said "within 7 days of purchase".
 
-I added a small renderer that writes the policy summary from verified fields and says when the start event is missing. Its regression test uses the saved tool response. It controls that summary; surrounding free-form prose still needs checking.
+The policy never said when those seven days began. Purchase and delivery can give a customer different deadlines.
 
-This came from a separate LangGraph experiment alongside my work on a multi-store Shopify assistant. The write-up includes the code, traces and answer assessments recorded by Codex.
+The checks passed because they matched the seven-day value to the source. They didn't check the extra claim in the sentence. In twenty repetitions of this question across two workflows, thirteen answers added "of purchase".
 
-Which factual claims in your assistant's displayed answer are actually covered by its checks?
+For this price-and-policy reply, I used ordinary code to generate the whole answer from the retrieved fields. When the start is missing, the reply says: “The retrieved details do not specify when that period begins.” Showing a correct policy summary beside the original model answer would still leave the unsupported sentence on screen.
+
+I replayed all twenty saved tool results through that code. Separate tests cover policies that explicitly start at purchase or delivery, conflicting records, and failed retrieval.
+
+I've written up the example with the code and saved answers so others can inspect both the failure and the fix.
