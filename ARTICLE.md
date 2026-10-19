@@ -2,7 +2,7 @@
 
 A small LangGraph experiment on the gap between checked fields and the answer a customer reads.
 
-In the first paired run of a small store-assistant experiment, both workflows returned the correct seven-day return window. Both also said it started at purchase, although the source never specified that. The automated checks passed because they verified the structured fields without checking every claim in the displayed answer.
+In twenty repeated answers to a synthetic return-policy question, the assistant added an unsupported purchase start date thirteen times. All twenty answers passed the structured checks. Those checks verified the seven-day duration without checking every claim in the displayed answer.
 
 While working on a multi-store Shopify assistant using LangGraph and pgvector retrieval, I built this separate experiment with fictional catalogue data. I originally wanted to compare a workflow with one round of tool use against one that could request further rounds. The return-policy answer gave me a more specific problem to investigate.
 
@@ -84,23 +84,23 @@ I then repeated each case ten times per workflow, keeping the inputs and instruc
 
 For the return-policy question, the one-batch workflow added the unsupported purchase start in **9 of 10 answers**. The loop did so in **4 of 10**. The remaining answers gave seven days without stating a start event. All twenty policy answers passed the structured checks.
 
-That difference belongs in the result. The shared checker left the assertion unchecked in both paths, but the paths produced it at different frequencies. These are repetitions of one synthetic question, and the workflows also differ in their final-step schemas and instructions; this does not establish a general architecture ranking or a production failure rate.
+The split is descriptive, not conclusive evidence that the loop is better. These are repeated generations for one question; nine bounded answers had exactly the same wording. The workflows also differ in their final-step schemas and instructions. The finding supported here is that the checker missed the added claim in both paths.
 
 The repeatability run used 240 model requests and about $2.08 in estimated standard API usage, separate from the initial comparison's $0.21. The [repeatability review](results/claude-repeatability-04/REVIEW.md) records token usage, timings and the individual answer assessments.
 
 These cases did not require a lookup whose input depended on an earlier result. Two model calls are not a minimum either: a known item and field may be fetched and displayed directly. The [companion README](README.md) explains the workflows and related work.
 
-## I also had to review the tests
+## The same checking gap in a product lookup
 
-Another fixture used an old product ID containing the word `retired`. Both answers said the variant had been retired, although the lookup returned only `not_found`.
+Another case returned `not_found` for an old product ID. Several answers said “Your old link is no longer valid”, although the tool had looked up an ID, not tested the link itself. That stronger statement also passed the structured checks.
 
-A separate diagnostic used an opaque ID. Neither workflow claimed retirement. The descriptive ID is a plausible contributor, although one paired run cannot establish the cause. That detail belongs in the review: the test itself gave the model a cue.
+The ID contained the word `retired`. In the original paired run, both answers claimed the variant had been retired. Across twenty repeat executions with that same ID, only one did: the loop's final repetition. A separate paired diagnostic with an opaque ID produced no retirement claim. These observations do not establish that the descriptive ID caused the wording, so the diagnostic cannot be presented as a demonstrated explanation.
 
 ## Scope and reproduction
 
-These synthetic cases were selected during development. There is no live Shopify integration or independent test set. The workflows use a custom JSON-schema protocol with different final-step schemas; this can affect their outputs. Temperature 0 does not guarantee identical repetitions.
+These synthetic cases were selected during development. There is no live Shopify integration or independent set of customer questions. The workflows use a custom JSON-schema protocol. Temperature 0 does not guarantee identical repetitions, and the observed counts are not production failure rates.
 
-The [answer review](results/claude-repeatability-04/POLICY-ANSWERS.md) preserves all twenty policy messages and identifies who assessed them. The experiment does not establish production reliability or validate live source freshness.
+Codex performed the recorded answer review. The [review file](results/claude-repeatability-04/POLICY-ANSWERS.md) preserves all twenty policy messages alongside those assessments. The experiment does not validate live source freshness.
 
 The [companion lab](README.md) contains the fixtures, raw traces, source snapshots and the [renderer](storelab/cards.py). After the README setup, the comparison can be rerun with:
 

@@ -49,3 +49,11 @@ The companion already exists separately from the product repository. Its public 
 Accepted: repeat all six cases ten times; explain Cedar as the fictional store; use “sets” for scope; identify the selected item as application context without inventing a prior chat turn; name the displayed-claim coverage rule; add the verified high-level Shopify/LangGraph/pgvector motivation; keep the closing question in first person.
 
 The article moves review-method details to the linked evidence report. It does not claim Haider personally reviewed every answer. The LinkedIn draft counts executions, not individual assertions, and refers to synthetic responses rather than messages sent to real customers. No claim about LinkedIn outbound-link suppression was added. Public article and repository URLs are still a publication step.
+
+## Final evidence review, 19 October 2026
+
+The article and post now lead with thirteen unsupported start events in twenty repeated policy answers. The 9/10 versus 4/10 split remains in the article as descriptive evidence, with repeated exact wording and sampling limitations stated. The retirement section distinguishes the original two positive answers, one retirement claim in twenty repetitions with the same ID, and zero in the separate opaque-ID pair. It does not assert that the ID caused the wording. A separate sentence explains why an ID lookup returning `not_found` does not establish that an old link itself was tested and found invalid.
+
+The article now explicitly attributes the recorded answer assessment to Codex. Haider's own confirmation is still pending; no reviewer identity or label has been silently changed. After Haider actually reads the twenty messages and states whether the labels are correct, record that review separately with its real date. Then the article can describe that completed review in first person. This pending editorial sentence is deliberately visible in the draft.
+
+The LinkedIn draft includes a specific reader question. Actual article/repository URLs belong in the publication comment once those destinations exist. No outbound-link suppression claim or fake URL was added.

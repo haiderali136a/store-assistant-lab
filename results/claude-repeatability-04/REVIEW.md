@@ -21,6 +21,14 @@ The original two policy answers both contained the unsupported detail. This repe
 
 The shared checker does not validate that prose assertion in either workflow. The observed frequency difference must also be reported. The workflows differ in final-step schema and instructions, and repeated generation can vary. This run does not isolate why their counts differ or establish that orchestration cannot influence answer wording. It does not demonstrate a general advantage for an agent loop.
 
+## Statistical interpretation and repeated text
+
+The twenty policy outputs contain seven distinct exact messages. Nine of ten bounded outputs (repeats 0–7 and 9) are identical. This is repeated generation on the same question, not twenty independent customer examples. Identical text alone does not establish statistical dependence between requests; the run does not establish independent random sampling from customer traffic either.
+
+For the 2-by-2 table `[[9, 1], [4, 6]]`, a conventional two-sided Fisher exact calculation gives **p = 0.05727554179566564**. This conditional calculation assumes an appropriate independent-observation model; it does not fix the experiment's sampling limitations or isolate a causal effect of orchestration. It is not conclusive evidence of a general architecture advantage, nor proof that the architectures are equivalent. The article reports descriptive counts and does not present a significance claim.
+
+The value was calculated by summing hypergeometric table probabilities no greater than the observed table's probability, with margins fixed at thirteen unsupported-start answers, seven without one, and ten observations per workflow. No additional model calls were made.
+
 ## Answer review
 
 The Codex coding assistant read every distinct displayed message and mapped each execution to its text. Exact duplicates were grouped only within the same scenario. Every row was checked against the saved scenario and tool evidence, including re-evaluation of structured assertions. This is not an independent human audit and is not attributed to Haider.
