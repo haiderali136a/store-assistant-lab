@@ -49,11 +49,11 @@ There are two gaps here. The policy data is incomplete for stating a deadline, a
 
 The rule I would use is that every factual claim in the displayed answer must either be rendered from verified fields or be included in the claims checked against evidence. Merely asking the model to list its claims does not establish that it listed everything it said.
 
-## A narrow fix for the return-window summary
+## Build the complete reply from supported fields
 
 In a real store, I would first check the full policy. If it says the window starts at delivery but that detail is missing from the tool response, the fix belongs in retrieval or field extraction. If the policy itself is unclear, its owner needs to clarify the rule. The assistant should not choose a start event. The reply still needs to handle missing information explicitly until that detail is available.
 
-For this particular output, I added a small renderer that writes a policy summary from application-selected evidence. It keeps an unknown start event explicit:
+I used ordinary code to turn the retrieved return fields into a short summary, since the supported fields and wording are predictable. When the start event is missing, it says so:
 
 ```python
 from storelab.cards import render_return_window
@@ -70,13 +70,11 @@ print(render_return_window(policy))
 
 The renderer validates the duration. If the policy record explicitly supplies the optional field `returns_start_event: "delivery"`, it can say "from delivery". That field is an extension demonstrated by the renderer; the measured tool response did not contain it.
 
-I chose ordinary code because this summary has a small number of supported fields and predictable wording. A stricter prompt is another option, but would need testing. Checking every assertion in free-form prose, possibly with another model, would cover a broader kind of answer and introduce its own validation work. I have not compared those approaches here.
+That summary is only a component: appending the original model answer could still reintroduce “of purchase”.
 
-A correct summary beside an unrestricted model answer would still leave the same failure possible. The application could show the careful summary and then repeat “of purchase” underneath it.
+I added a [response function](https://github.com/haiderali136a/store-assistant-lab/blob/0a086ec268f745be9cb300a2e90f7b6d35703018/storelab/presentation.py) for this specific intent: the selected item’s price and return window. It uses that renderer to build the entire displayed reply from the tool results. It does not append the model’s message or interpolate document prose. The application supplies the store, market and selected item; retrieval must already be scoped to that store.
 
-## Check the complete displayed reply
-
-I added a [response function](https://github.com/haiderali136a/store-assistant-lab/blob/0a086ec268f745be9cb300a2e90f7b6d35703018/storelab/presentation.py) for this specific intent: the selected item’s price and return window. It builds the entire displayed reply from the tool results. It does not append the model’s message or interpolate document prose. The application supplies the store, market and selected item; retrieval must already be scoped to that store.
+In the original runs, the model chose which tools to call and then wrote an answer. This replay changes only how the saved results are presented; routing a live question to this fixed reply would be an application integration step.
 
 I replayed the twenty saved tool responses through this path. Each produced:
 
