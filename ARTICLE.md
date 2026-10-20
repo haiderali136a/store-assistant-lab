@@ -74,6 +74,8 @@ That summary is only a component: appending the original model answer could stil
 
 I added a [response function](https://github.com/haiderali136a/store-assistant-lab/blob/0a086ec268f745be9cb300a2e90f7b6d35703018/storelab/presentation.py) for this specific intent: the selected item’s price and return window. It uses that renderer to build the entire displayed reply from the tool results. It does not append the model’s message or interpolate document prose. The application supplies the store, market and selected item; retrieval must already be scoped to that store.
 
+In the multi-tenant assistant I worked on, the backend passes the store identity from the request context into retrieval, and pgvector queries filter by that store. A correctly quoted policy from the wrong store would still be the wrong answer.
+
 In the original runs, the model chose which tools to call and then wrote an answer. This replay changes only how the saved results are presented; routing a live question to this fixed reply would be an application integration step.
 
 I replayed the twenty saved tool responses through this path. Each produced:
