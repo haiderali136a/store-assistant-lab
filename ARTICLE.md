@@ -4,7 +4,7 @@ A small LangGraph experiment on the gap between checked fields and the answer a 
 
 In twenty repeated answers to a synthetic return-policy question, the assistant said the window started at purchase in thirteen of them. All twenty answers passed the structured checks. Those checks verified the seven-day duration without checking every claim in the displayed answer.
 
-While working on a multi-store AI assistant using LangGraph and pgvector retrieval, I built this separate experiment with fictional catalogue data. I originally wanted to compare a workflow with one round of tool use against one that could request further rounds. The return-policy answer gave me a more specific problem to investigate.
+While working on a multi-store AI assistant using LangGraph and pgvector retrieval, I built this separate experiment with sample catalogue data. I originally wanted to compare a workflow with one round of tool use against one that could request further rounds. The return-policy answer gave me a more specific problem to investigate.
 
 ## What the source said, and what the customer would see
 
@@ -37,7 +37,7 @@ Each model answer contained a customer-facing message and a list of factual clai
 }
 ```
 
-`cedar` identifies the fictional store whose return policy was retrieved.
+`cedar` identifies the sample store whose return policy was retrieved.
 
 The checker matched the required factual claims and their evidence references to the tool results. It also checked that the answer's `status` field matched the expected outcome, such as `answered` or `unavailable`. These are the lab's *structured assertions*: checks on specific output fields, not on the explanation written to the customer.
 
@@ -90,7 +90,7 @@ This trades flexible wording for control over a small response format. It is sti
 
 ## The experiment and repeated runs
 
-Both workflows use LangGraph and Claude Sonnet 4.6 at temperature 0, with the same initial prompt, tools and fictional data. One can request a single batch of lookups before answering. The other can inspect the results and request another batch. The application's code sets the store and market used by the tools.
+Both workflows use LangGraph and Claude Sonnet 4.6 at temperature 0, with the same initial prompt, tools and sample data. One can request a single batch of lookups before answering. The other can inspect the results and request another batch. The application's code sets the store and market used by the tools.
 
 The initial six-case comparison covered product options, an old product reference, a changed price, price plus return policy, and a failed lookup. All twelve executions passed the structured checks.
 
