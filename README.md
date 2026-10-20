@@ -2,9 +2,9 @@
 
 A small Python/LangGraph experiment comparing two ways to answer shopping questions. The store data is fictional. This directory contains no proprietary app implementation or merchant data.
 
-The accompanying [article](ARTICLE.md), “The Return-Policy Detail My Answer Checks Missed”, focuses on an unsupported policy detail that passed the structured checks. Call counts provide background; the tested cases did not require a dependent lookup round.
+The accompanying [article](https://medium.com/@haiderali136a/the-return-policy-claim-my-llm-checks-missed-a68ad6f0ee75), “The Return-Policy Claim My LLM Checks Missed”, focuses on an unsupported policy detail that passed the structured checks. Call counts provide background; the tested cases did not require a dependent lookup round.
 
-**Status, 20 October 2026:** 48 offline tests pass. The ten-repeat follow-up completed 120 executions with 120 structured passes. Unsupported purchase-start wording appeared in 9/10 policy answers from the bounded workflow and 4/10 from the loop. All raw traces and per-answer reviews are saved. Start with the [article](ARTICLE.md), [repeatability results](results/claude-repeatability-04/REVIEW.md) or [review guide](REVIEW.md). These are synthetic results, not production failure rates.
+**Status, 20 October 2026:** 48 offline tests pass. The ten-repeat follow-up completed 120 executions with 120 structured passes. Unsupported purchase-start wording appeared in 9/10 policy answers from the bounded workflow and 4/10 from the loop. All raw traces and per-answer reviews are saved. Start with the [article](https://medium.com/@haiderali136a/the-return-policy-claim-my-llm-checks-missed-a68ad6f0ee75), [repeatability results](results/claude-repeatability-04/REVIEW.md) or [review guide](REVIEW.md). These are synthetic results, not production failure rates.
 
 ## The question
 
