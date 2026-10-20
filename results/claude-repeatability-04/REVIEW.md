@@ -1,6 +1,6 @@
 # Repeatability check: the policy detail varies, the checking gap remains
 
-Run completed 18 October 2026; answer review completed 19 October 2026. Ten fresh executions of each of the six follow-up cases per workflow, Claude Sonnet 4.6, temperature 0. Original follow-up results remain separate. The [plan](../../REPEATABILITY-PLAN.md) was frozen before this run; prompts, schemas, tools and grading rules were unchanged.
+Run completed 18 October 2026; answer review completed 19 October 2026. Ten fresh executions of each of the six follow-up cases per workflow, Claude Sonnet 4.6, temperature 0. Original follow-up results remain separate. The [plan](../../docs/REPEATABILITY-PLAN.md) was frozen before this run; prompts, schemas, tools and grading rules were unchanged.
 
 ## Result
 

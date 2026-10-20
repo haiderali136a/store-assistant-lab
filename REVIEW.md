@@ -1,6 +1,6 @@
-# Review before publication
+# Review guide
 
-Start with [ARTICLE.md](ARTICLE.md). It is the complete article draft. [LINKEDIN-POST.md](LINKEDIN-POST.md) is the shorter accompanying post. Neither has been published.
+Start with the [published article](ARTICLE.md). The [earlier LinkedIn draft](docs/LINKEDIN-POST.md) is retained in docs for reference.
 
 ## Main result
 
