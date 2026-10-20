@@ -51,6 +51,8 @@ The rule I would use is that every factual claim in the displayed answer must ei
 
 ## A narrow fix for the return-window summary
 
+In a real store, I would first check the full policy. If it says the window starts at delivery but that detail is missing from the tool response, the fix belongs in retrieval or field extraction. If the policy itself is unclear, its owner needs to clarify the rule. The assistant should not choose a start event. The reply still needs to handle missing information explicitly until that detail is available.
+
 For this particular output, I added a small renderer that writes a policy summary from application-selected evidence. It keeps an unknown start event explicit:
 
 ```python
