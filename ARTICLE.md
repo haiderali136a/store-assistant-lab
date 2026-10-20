@@ -92,17 +92,17 @@ This trades flexible wording for control over a small response format. It is sti
 
 Both workflows use LangGraph and Claude Sonnet 4.6 at temperature 0, with the same initial prompt, tools and sample data. One can request a single batch of lookups before answering. The other can inspect the results and request another batch. The application's code sets the store and market used by the tools.
 
-The initial six-case comparison covered product options, an old product reference, a changed price, price plus return policy, and a failed lookup. All twelve executions passed the structured checks.
+The initial six-case comparison covered product options, an old product reference, a changed price, price plus return policy, and a failed lookup.
 
-I then repeated each case ten times per workflow, keeping the inputs and instructions unchanged. All 120 executions passed those checks and used two model requests each. Executing a tool is counted separately from calling the model.
+I then repeated each case ten times per workflow, keeping the inputs and instructions unchanged.
 
 For the return-policy question, the one-batch workflow added the unsupported purchase start in **9 of 10 answers**. The loop did so in **4 of 10**. The remaining answers gave seven days without stating a start event. All twenty policy answers passed the structured checks.
 
 The split is descriptive, not conclusive evidence that the loop is better. These are repeated generations for one question; nine bounded answers had exactly the same wording. The workflows also differ in their final-step schemas and instructions. The finding supported here is that the checker missed the added claim in both paths.
 
-The repeatability run used 240 model requests and about $2.08 in estimated standard API usage, separate from the initial comparison's $0.21. The [repeatability review](https://github.com/haiderali136a/store-assistant-lab/blob/0a086ec268f745be9cb300a2e90f7b6d35703018/results/claude-repeatability-04/REVIEW.md) records token usage, timings and the individual answer assessments.
+The [repeatability review](https://github.com/haiderali136a/store-assistant-lab/blob/0a086ec268f745be9cb300a2e90f7b6d35703018/results/claude-repeatability-04/REVIEW.md) records token usage, timings and the individual answer assessments.
 
-These cases did not require a lookup whose input depended on an earlier result. Two model calls are not a minimum either: a known item and field may be fetched and displayed directly. The [companion README](https://github.com/haiderali136a/store-assistant-lab/blob/0a086ec268f745be9cb300a2e90f7b6d35703018/README.md) explains the workflows and related work.
+These cases did not require a lookup whose input depended on an earlier result. A known item and field may also be fetched and displayed directly. The [companion README](https://github.com/haiderali136a/store-assistant-lab/blob/0a086ec268f745be9cb300a2e90f7b6d35703018/README.md) explains the workflows and related work.
 
 ## The same checking gap in a product lookup
 
@@ -124,7 +124,7 @@ python -m storelab.presentation_replay \
   --output results/my-presentation-replay
 ```
 
-To rerun the original model comparison instead:
+Optional: rerun the original model comparison. This requires an Anthropic API key and incurs usage charges:
 
 ```bash
 python -m storelab.run \
@@ -133,6 +133,6 @@ python -m storelab.run \
   --max-requests 260 --output results/my-repeatability
 ```
 
-This calls a paid API; the request cap limits attempts, not dollar spending. Existing results are preserved separately.
+The request cap limits attempts, not dollar spending. Existing results are preserved separately.
 
 In this example, verifying "seven days" left "from purchase" unchecked. Building the complete reply from supported fields makes that missing information explicit without reintroducing the unchecked sentence. When reviewing another assistant, I would ask: which factual claims in the displayed answer are actually covered by its checks?
