@@ -44,20 +44,18 @@ These tools simulate a small catalog shape. They do not prove Shopify API compat
 
 Before adding a live adapter, validate it against a disposable development store and a pinned Shopify API version. Keep server-owned store/market scope and credentials outside model-controlled arguments. See [ProductVariant](https://shopify.dev/docs/api/storefront/latest/objects/ProductVariant) and [contextual queries](https://shopify.dev/docs/storefronts/headless/building-with-the-storefront-api/in-context).
 
-## Publication gate
+## Interpretation
 
-Run and inspect the initial pilot before tuning. Preserve all failed and successful traces. Any prompt/schema changes require a separately labeled run with fresh source hashes. Freeze a new, independently phrased evaluation set before making broader claims; repeated store variants are not a substitute for that set.
-
-The public article can report a tie, a limitation, or an advantage. It needs at least one useful observed result, reproducible traces, and completed prose review. It must distinguish authored fixtures from merchant traffic and hypothetical failures from production incidents. No article conclusion is established by the offline tests alone.
+Failed and successful traces are preserved. Prompt or schema changes use separately labelled runs with fresh source hashes. These authored fixtures are not merchant traffic, and offline tests alone do not establish model-answer accuracy or production performance.
 
 ## Completed follow-up and diagnostic
 
-The [follow-up protocol](docs/FOLLOWUP-PLAN.md) was written before its hosted run. Six authored cases received the same revised instructions in both architectures; all used the Cedar store. Cross-store isolation remains an offline harness check, not a claim from the hosted results. The [neutral-ID diagnostic](docs/REFERENCE-CONTROL-PLAN.md) was designed after inspecting the follow-up and changes only a model-visible context identifier. It is post-hoc, not held out.
+The follow-up protocol was specified before its hosted run. Six authored cases received the same revised instructions in both architectures; all used the Cedar store. Cross-store isolation remains an offline harness check, not a claim from the hosted results. The [neutral-ID diagnostic](results/claude-reference-control-03/REVIEW.md) was designed after inspecting the follow-up and changes only a model-visible context identifier. It is post-hoc, not held out.
 
-All 22 saved workflow executions across the three runs used two model calls. This does not prove two calls suffice generally. The follow-up's twelve structured passes include four messages with unsupported wording: two explanations of a missing reference and two return-policy start events. The ID diagnostic removes the former wording in its single paired execution; this cannot establish a mechanism or frequency. Full messages were reviewed by the coding assistant; independent human review remains outstanding.
+All 22 saved workflow executions across the three runs used two model calls. This does not prove two calls suffice generally. The follow-up's twelve structured passes include four messages with unsupported wording: two explanations of a missing reference and two return-policy start events. The ID diagnostic removes the former wording in its single paired execution; this cannot establish a mechanism or frequency. The initial prose review was automated; it was not independent human validation.
 
 The `cards.py` renderer was added after all hosted runs. It consumes application-selected policy evidence and formats a restricted return-window statement. It is tested separately and is not a measured repair of the free-form model workflows. It cannot validate merchant scope, source freshness, conflicting policies, eligibility or neighbouring model prose.
 
 ## Ten-repeat confirmation check
 
-Completed 18 October; reviewed 19 October 2026. The unchanged six-case follow-up was repeated ten times per workflow, with 120 structured passes in 120 executions and two model requests per execution. Policy prose added an unsupported purchase start in 9/10 bounded and 4/10 loop answers. This is consistency testing of a known synthetic example, not held-out traffic evaluation. See the [frozen plan](docs/REPEATABILITY-PLAN.md), [review](results/claude-repeatability-04/REVIEW.md) and [complete policy messages](results/claude-repeatability-04/POLICY-ANSWERS.md). The shared validation gap and different observed frequencies must both be reported.
+Completed 18 October; reviewed 19 October 2026. The unchanged six-case follow-up was repeated ten times per workflow, with 120 structured passes in 120 executions and two model requests per execution. Policy prose added an unsupported purchase start in 9/10 bounded and 4/10 loop answers. This is consistency testing of a known synthetic example, not held-out traffic evaluation. See the [repeatability report](results/claude-repeatability-04/REVIEW.md) and [complete policy messages](results/claude-repeatability-04/POLICY-ANSWERS.md). The shared validation gap and different observed frequencies must both be reported.

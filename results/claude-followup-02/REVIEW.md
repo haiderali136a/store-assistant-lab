@@ -13,7 +13,7 @@ Run completed 18 October 2026 using Claude Sonnet 4.6. Six authored cases, two w
 | Price and return policy | 2 / 2 | 2 / 2 | Both pass | Both add an unsupported start event: “within 7 days of purchase.” Source gives only seven days. |
 | Catalogue timeout | 2 / 1 | 2 / 1 | Both pass | Both abstain without a price and explain a temporary issue. |
 
-The coding assistant reviewed all twelve messages against the saved evidence. This is not independent human review. Twelve structured passes must not be described as twelve fully correct answers. The optional evidence gate also leaves the problematic prose unchanged because its scope is structured claims.
+An automated prose review assessed all twelve messages against the saved evidence. This is not independent human review. Twelve structured passes must not be described as twelve fully correct answers. The optional evidence gate also leaves the problematic prose unchanged because its scope is structured claims.
 
 Both paths used twelve model calls and eight tool calls across their six executions. The loop never needed a second tool batch. In the missing-reference case, both proactively requested the old-ID lookup and the independent title/options search together. There is no observed call-count saving or adaptive-recovery advantage here.
 

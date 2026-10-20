@@ -19,7 +19,7 @@ Both paths made one catalog-tool call in each execution. The loop did not make r
 
 ## Review of all eight answers
 
-This review was performed by the coding assistant against the saved fixtures and traces. It is not independent human validation. The raw answer, original score and model/tool traces remain unchanged.
+This was an automated prose review against the saved fixtures and traces. It is not independent human validation. The raw answer, original score and model/tool traces remain unchanged.
 
 | Answer pair | Review |
 | --- | --- |

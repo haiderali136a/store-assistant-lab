@@ -5,3 +5,11 @@ __pycache__/
 results/local-*/
 
 /PUBLISHING.md
+
+# Internal editorial material stays outside the public repository.
+/REVIEW.md
+/LINKEDIN-POST.md
+/*-PLAN.md
+/docs/LINKEDIN-POST.md
+/docs/*-PLAN.md
+/results/*/HUMAN-REVIEW-WORKSHEET.md

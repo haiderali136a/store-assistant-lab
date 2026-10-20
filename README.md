@@ -4,7 +4,7 @@ A small Python/LangGraph experiment comparing two ways to answer shopping questi
 
 The accompanying [article](https://medium.com/@haiderali136a/the-return-policy-claim-my-llm-checks-missed-a68ad6f0ee75), “The Return-Policy Claim My LLM Checks Missed”, focuses on an unsupported policy detail that passed the structured checks. Call counts provide background; the tested cases did not require a dependent lookup round.
 
-**Status, 20 October 2026:** 13 of 20 policy answers added an unsupported purchase start; all twenty passed the structured checks. These are repeated answers to one synthetic question, not a production failure rate. The full follow-up completed 120 executions with 120 structured passes, and 48 offline tests pass. All raw traces and per-answer reviews are saved. Start with the [article](https://medium.com/@haiderali136a/the-return-policy-claim-my-llm-checks-missed-a68ad6f0ee75), [repeatability results](results/claude-repeatability-04/REVIEW.md) or [review guide](REVIEW.md).
+**Status, 20 October 2026:** 13 of 20 policy answers added an unsupported purchase start; all twenty passed the structured checks. These are repeated answers to one synthetic question, not a production failure rate. The full follow-up completed 120 executions with 120 structured passes, and 48 offline tests pass. All raw traces and per-answer reviews are saved. Start with the [article](https://medium.com/@haiderali136a/the-return-policy-claim-my-llm-checks-missed-a68ad6f0ee75), [repeatability results](results/claude-repeatability-04/REVIEW.md) or [method and limitations](METHODOLOGY.md).
 
 ## The question
 
@@ -94,11 +94,11 @@ The adapter simplifies unsupported JSON Schema length constraints for Anthropic 
   --max-requests 40 --output results/my-followup
 ```
 
-To repeat all six follow-up cases ten times, add `--repeat 10` and use `--max-requests 260` with a new output directory. The [repeatability plan](docs/REPEATABILITY-PLAN.md) and [review](results/claude-repeatability-04/REVIEW.md) describe that paid run.
+To repeat all six follow-up cases ten times, add `--repeat 10` and use `--max-requests 260` with a new output directory. The [repeatability report](results/claude-repeatability-04/REVIEW.md) describes that paid run.
 
 `--suite reference_control` runs the one-case neutral-ID diagnostic. Original defaults remain `--suite pilot1`. Each completed hosted run includes a hash-verified `source/` snapshot to reproduce its precise code version. Later presentation examples are not part of earlier measured runs. Results can vary across repetitions.
 
-Read the [follow-up protocol](docs/FOLLOWUP-PLAN.md), [follow-up review](results/claude-followup-02/REVIEW.md) and [diagnostic review](results/claude-reference-control-03/REVIEW.md). The first pilot remains available with its original grades.
+Read the [follow-up review](results/claude-followup-02/REVIEW.md) and [diagnostic review](results/claude-reference-control-03/REVIEW.md). The first pilot remains available with its original grades.
 
 ## Results
 

@@ -1,6 +1,6 @@
 # Return-policy answers for review
 
-Run completed 18 October 2026; original review 19 October 2026. Reviewer of the assessments below: Codex coding assistant. Haider subsequently completed a [guided review](HUMAN-REVIEW.md) of all seven distinct policy answers, covering twenty saved runs, on 19 October 2026. That record describes the guidance and his final decisions; it is not an independent assessment. The source in every entry supplies seven days and no start event.
+Run completed 18 October 2026; original review 19 October 2026. The initial prose assessments below were automated. Haider subsequently completed a [guided review](HUMAN-REVIEW.md) of all seven distinct policy answers, covering twenty saved runs, on 19 October 2026. That record describes the guidance and his final decisions; it is not an independent assessment. The source in every entry supplies seven days and no start event.
 
 All twenty answers below passed the structured checks. “Unsupported start event” records the separate prose assessment; an absent start event is not a complete customer deadline either. Raw messages are preserved, including punctuation and Markdown.
 
